@@ -2,5 +2,5 @@
   "id": "https://fiks.ks.no/innsyn/meldingtype.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Innsyn Meldingstype",
-  "enum": ["faktura", "saksmappe", "journalpost", "byggesak", "forsendelse", "matrikkelenhet", "innsendtskjema", "skjemakladd", "kommunaltjeneste"]
+  "enum": ["faktura", "saksmappe", "journalpost", "byggesak", "innsendtskjema", "skjemakladd"]
 }
