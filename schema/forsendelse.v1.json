@@ -1,0 +1,79 @@
+{
+  "id": "https://fiks.ks.no/innsyn/forsendelse.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Forsendelse V1",
+  "description": "Melding som beskriver en forsendelse. Benyttes i dag for å vise post sendt via KS-SvarUt på minside.kommune.no",
+  "type": "object",
+  "required": [
+    "tittel",
+    "sendtDato",
+    "avsender",
+    "mottaker",
+    "lest",
+    "dokumenter"
+  ],
+  "definitions": {
+    "ForsendelseDokumentV1": {
+      "description": "Et dokument for en forsendelse",
+      "type": "object",
+      "required": [
+        "tittel",
+        "nedlastingLenke"
+      ],
+      "properties": {
+        "tittel": {
+          "$ref": "string.not.blank.json",
+          "description": "Tittel for dokumentet"
+        },
+        "size": {
+          "description": "Dokumentets størrelse i bytes",
+          "type": "integer"
+        },
+        "nedlastingLenke": {
+          "$ref": "string.not.blank.json",
+          "description": "Url for nedlasting av dokumentet"
+        }
+      }
+    }
+  },
+  "properties": {
+    "tittel": {
+      "$ref": "string.not.blank.json",
+      "description": "Tittel for meldingen"
+    },
+    "sendtDato": {
+      "$ref": "int64.json",
+      "description": "Dato forsendelsen er sendt. Dette feltet brukes som sorteringsdato. Uttrykket som millisekunder etter epoch"
+    },
+    "avsender": {
+      "$ref": "string.not.blank.json",
+      "description": "Navn på person eller orgnr / navn på organisasjon som er kilde for forsendelsen"
+    },
+    "mottaker": {
+      "$ref": "string.not.blank.json",
+      "description": "Navn på person eller orgnr / navn på organisasjon som er mottaker for forsendelsen"
+    },
+    "lest": {
+      "description": "Indikerer om forsendelsen er lest eller ikke",
+      "type": "boolean"
+    },
+    "svarLenke": {
+      "$ref": "string.nullable.json",
+      "description": "Url som skal benyttes for å svare på denne forsendelsen"
+    },
+    "dokumenter": {
+      "description": "Dokumenter som inngår i denne forsendelsen",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/ForsendelseDokumentV1"
+      }
+    },
+    "korrelasjonId": {
+      "$ref": "korrelasjon.id.json"
+    },
+    "forelder": {
+      "$ref": "forelder.json"
+    }
+  }
+}

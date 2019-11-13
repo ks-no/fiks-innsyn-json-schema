@@ -1,0 +1,11 @@
+{
+  "id": "https://fiks.ks.no/innsyn/int64.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Int64",
+  "description": "64-bits integer",
+  "type": [
+    "string",
+    "integer"
+  ],
+  "format": "int64"
+}

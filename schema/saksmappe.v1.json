@@ -1,0 +1,42 @@
+{
+  "id": "https://fiks.ks.no/innsyn/saksmappe.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Saksmappe V1",
+  "description": "Melding som beskriver en saksmappe",
+  "type": "object",
+  "required": [
+    "mappeId",
+    "tittel",
+    "saksstatus",
+    "saksdato",
+    "saksansvarlig",
+    "administrativEnhet"
+  ],
+  "properties": {
+    "mappeId": {
+      "$ref": "string.not.blank.json"
+    },
+    "tittel": {
+      "$ref": "string.not.blank.json"
+    },
+    "beskrivelse": {
+      "$ref": "string.nullable.json",
+      "description": ""
+    },
+    "saksstatus": {
+      "$ref": "saksmappe.sakstatus.v1.json"
+    },
+    "saksdato": {
+      "$ref": "int64.json",
+      "description": ""
+    },
+    "saksansvarlig": {
+      "description": "",
+      "type": "string"
+    },
+    "administrativEnhet": {
+      "description": "",
+      "type": "string"
+    }
+  }
+}

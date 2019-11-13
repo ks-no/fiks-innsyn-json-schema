@@ -1,0 +1,14 @@
+{
+  "id": "https://fiks.ks.no/innsyn/korrelasjon.id.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Korrelasjonsid",
+  "description": "Id for å sette denne meldingen i sammenheng med andre indekserte meldinger",
+  "type": [
+    "string",
+    "null"
+  ],
+  "pattern": "^[A-Za-z0-9\\-]+$",
+  "examples": [
+    "6fd478cc-d91d-4062-aecd-598649f7a38c"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "https://fiks.ks.no/innsyn/innsendt.skjema.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Innsendt Skjema V1",
+  "description": "Melding som beskriver et innsendt skjema",
+  "type": "object",
+  "required": [
+    "tittel",
+    "mottaker",
+    "avsender",
+    "innsendtdato",
+    "skjemafil"
+  ],
+  "properties": {
+    "tittel": {
+      "description": "Tittel på skjema",
+      "type": "string",
+      "examples": [
+        "Søknad om fartsdempende tiltak"
+      ]
+    },
+    "mottaker": {
+      "description": "Navn på mottaker av skjema",
+      "type": "string",
+      "examples": [
+        "Bergen kommune boligetaten"
+      ]
+    },
+    "avsender": {
+      "description": "Navn på avsender av skjema",
+      "type": "string",
+      "examples": [
+        "Ola Nordmann"
+      ]
+    },
+    "innsendtdato": {
+      "$ref": "int64.json",
+      "description": "Dato for når skjemaet var innsendt. Uttrykket som millisekunder etter epoch"
+    },
+    "skjemafil": {
+      "$ref": "skjema.fil.v1.json"
+    },
+    "vedlegg": {
+      "description": "Vedlegg til skjema",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "skjema.fil.v1.json"
+      }
+    },
+    "url": {
+      "$ref": "string.nullable.json",
+      "description": "Url til sak, eller videre saksgang i skjemaet"
+    },
+    "korrelasjonId": {
+      "$ref": "korrelasjon.id.json"
+    },
+    "forelder": {
+      "$ref": "forelder.json"
+    }
+  }
+}

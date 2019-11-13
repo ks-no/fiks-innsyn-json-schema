@@ -1,0 +1,25 @@
+{
+  "id": "https://fiks.ks.no/innsyn/forelder.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Forelder",
+  "description": "Definerer en annen indeksert melding som forelder til denne meldingen",
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "meldingId",
+    "type"
+  ],
+  "properties": {
+    "meldingId": {
+      "description": "Spesifiser et foreldre-dokument",
+      "type": "string",
+      "format": "uuid"
+    },
+    "type": {
+      "description": "Meldingstype",
+      "$ref": "meldingtype.json"
+    }
+  }
+}

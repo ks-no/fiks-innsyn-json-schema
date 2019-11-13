@@ -1,0 +1,54 @@
+{
+  "id": "https://fiks.ks.no/innsyn/kommunal.tjeneste.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Kommunal Tjeneste V1",
+  "description": "Melding som beskriver en kommunal tjeneste",
+  "type": "object",
+  "required": [
+    "tjenesteId",
+    "tittel",
+    "lenke",
+    "rettetMot",
+    "kommuneFiksOrganisasjonId",
+    "kommuneVisningsnavn"
+  ],
+  "definitions": {
+    "KommunalTjenesteRettetMotV1": {
+      "description": "",
+      "enum": ["PERSON", "ORGANISASJON", "PERSON_OG_ORGANISASJON"]
+    }
+  },
+  "properties": {
+    "tjenesteId": {
+      "description": "Id for den kommunale tjenesten",
+      "type": "string",
+      "format": "uuid"
+    },
+    "tittel": {
+      "$ref": "string.not.blank.json",
+      "description": "Tittel på den kommunale tjenesten"
+    },
+    "lenke": {
+      "$ref": "string.not.blank.json",
+      "description": "Lenke til den kommunale tjenesten"
+    },
+    "rettetMot": {
+      "$ref": "#/definitions/KommunalTjenesteRettetMotV1"
+    },
+    "kommuneFiksOrganisasjonId": {
+      "description": "Fiks organisasjon id for kommunen som eier denne tjenesten",
+      "type": "string",
+      "format": "uuid"
+    },
+    "kommuneVisningsnavn": {
+      "$ref": "string.not.blank.json",
+      "description": "Visningsnavn for kommunen som eier denne tjenesten"
+    },
+    "korrelasjonId": {
+      "$ref": "korrelasjon.id.json"
+    },
+    "forelder": {
+      "$ref": "forelder.json"
+    }
+  }
+}

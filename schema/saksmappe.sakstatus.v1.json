@@ -1,0 +1,6 @@
+{
+  "id": "https://fiks.ks.no/innsyn/saksmappe.sakstatus.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Sakmappe Sakstatus V1",
+  "enum": ["UNDER_BEHANDLING", "AVSLUTTET", "UTGAR"]
+}

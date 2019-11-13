@@ -1,0 +1,59 @@
+{
+  "id": "https://fiks.ks.no/innsyn/faktura.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Faktura V1",
+  "description": "Melding som beskriver en faktura",
+  "type": "object",
+  "required": [
+    "tittel",
+    "fakturaDato",
+    "forfallDato",
+    "fakturaMottaker",
+    "betalesTil",
+    "belop"
+  ],
+  "properties": {
+    "tittel": {
+      "$ref": "string.not.blank.json",
+      "description": "Tittel for fakturaen",
+      "examples": [
+        "Parkeringsgebyr 11.05.18"
+      ]
+    },
+    "fakturaDato": {
+      "$ref": "int64.json",
+      "description": "Dato fakturaen er sendt. Dette feltet brukes som sorteringsdato. Uttrykket som millisekunder etter epoch"
+    },
+    "forfallDato": {
+      "$ref": "int64.json",
+      "description": "Dato fakturaen forfaller. Uttrykket som millisekunder etter epoch"
+    },
+    "fakturaMottaker": {
+      "$ref": "string.not.blank.json",
+      "description": "Mottaker for fakturaen",
+      "examples": [
+        "Ola Nordmann"
+      ]
+    },
+    "betalesTil": {
+      "$ref": "string.not.blank.json",
+      "description": "Aktøren fakturaen skal betales til",
+      "examples": [
+        "Bergen Kommune"
+      ]
+    },
+    "belop": {
+      "$ref": "string.not.blank.json",
+      "description": "Beløp. Oppfordres til å bruke beløp med to desimaler skilt av komma, men ingen validering gjøres på dette feltet",
+      "examples": [
+        "350,00"
+      ]
+    },
+    "korrelasjonId": {
+      "$ref": "korrelasjon.id.json"
+    },
+    "forelder": {
+      "$ref": "forelder.json"
+    }
+  }
+}

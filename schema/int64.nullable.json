@@ -1,0 +1,12 @@
+{
+  "id": "https://fiks.ks.no/innsyn/int64.nullable.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Int64 Nullable",
+  "description": "64-bits integer som også kan være null",
+  "type": [
+    "string",
+    "integer",
+    "null"
+  ],
+  "format": "int64"
+}

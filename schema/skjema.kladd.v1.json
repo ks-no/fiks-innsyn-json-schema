@@ -1,0 +1,62 @@
+{
+  "id": "https://fiks.ks.no/innsyn/skjema.kladd.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Skjemakladd V1",
+  "description": "Melding som beskriver en skjemakladd",
+  "type": "object",
+  "required": [
+    "tittel",
+    "endretDato",
+    "url"
+  ],
+  "properties": {
+    "tittel": {
+      "description": "Tittel på skjema",
+      "type": "string",
+      "examples": [
+        "Søknad om fartsdempende tiltak"
+      ]
+    },
+    "mottaker": {
+      "$ref": "string.nullable.json",
+      "description": "Navn på mottaker av skjema",
+      "examples": [
+        "Bergen kommune boligetaten"
+      ]
+    },
+    "avsender": {
+      "$ref": "string.nullable.json",
+      "description": "Navn på avsender av skjema",
+      "examples": [
+        "Ola Nordmann"
+      ]
+    },
+    "endretDato": {
+      "$ref": "int64.json",
+      "description": "Dato for når skjemaet sist var endret/lagret. Uttrykket som millisekunder etter epoch"
+    },
+    "skjemafil": {
+      "$ref": "skjema.fil.v1.json"
+    },
+    "vedlegg": {
+      "description": "Vedlegg til skjema",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "skjema.fil.v1.json"
+      }
+    },
+    "url": {
+      "$ref": "string.not.blank.json",
+      "description": "Url til skjema kladd for videre utfylling/sletting"
+    },
+    "korrelasjonId": {
+      "$ref": "korrelasjon.id.json"
+    },
+    "forelder": {
+      "$ref": "forelder.json"
+    }
+  }
+}
