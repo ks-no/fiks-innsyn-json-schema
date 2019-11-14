@@ -1,3 +1,6 @@
-.idea
+test/
+target/
 *.iml
-target
+.idea/
+*.p12
+.flattened-pom.xml

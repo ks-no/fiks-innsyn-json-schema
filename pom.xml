@@ -4,14 +4,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>no.ks.fiks.pom</groupId>
+        <artifactId>fiks-ekstern-super-pom</artifactId>
+        <version>0.0.9</version>
+    </parent>
+
     <groupId>no.ks.fiks</groupId>
     <artifactId>innsyn-json-schema</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <description>${project.artifactId}</description>
+    <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
+
+    <scm>
+        <connection>scm:git:git@github.com:ks-no/fiks-innsyn-json-schema.git</connection>
+        <developerConnection>scm:git:git@github.com:ks-no/fiks-innsyn-json-schema.git</developerConnection>
+        <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
+    </scm>
+
     <properties>
+        <revision>1.0.0</revision>
+        <changelist>-SNAPSHOT</changelist>
         <commons-lang.version>2.6</commons-lang.version>
         <jackson.version>2.9.10</jackson.version>
         <jsonschema2pojo-maven-plugin.version>1.0.1</jsonschema2pojo-maven-plugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -55,13 +74,6 @@
                         <phase>generate-sources</phase>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>
