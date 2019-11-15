@@ -4,14 +4,16 @@ Dette repoet inneholder JSON Schema-definisjoner for bruk mot indekseringstjenes
 
 ## Generering av modeller
 
-For Java-brukere kan Maven-artefakt med ferdig genererte POJO-klasser finnes på Maven Central:
+Maven-artefakt med ferdig genererte POJO-klasser finnes på Maven Central:
 ```
+<dependency>
     <groupId>no.ks.fiks</groupId>
     <artifactId>innsyn-json-schema</artifactId>
     <version>1.0.0</version>
+</dependency>
 ```
 
-For de som ønsker å generere modellene selv bør det bemerkes at vi har brukt et custom format for 64-bits heltall, som ser slik ut: 
+For de som ønsker å generere modellklasser selv bør det bemerkes at det er brukt et custom format for 64-bits heltall, som ser slik ut: 
 ```
 {
   "type": [
