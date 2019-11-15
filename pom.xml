@@ -60,7 +60,7 @@
                 <version>${jsonschema2pojo-maven-plugin.version}</version>
                 <configuration>
                     <sourceDirectory>schema</sourceDirectory>
-                    <targetPackage>no.ks.fiks.innsyn.schema</targetPackage>
+                    <targetPackage>no.ks.fiks.innsyn.schema.ekstern</targetPackage>
                     <includeAdditionalProperties>false</includeAdditionalProperties>
                     <formatTypeMapping>
                         <int64>java.lang.Long</int64>
