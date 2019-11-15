@@ -1,5 +1,5 @@
 {
-  "id": "https://fiks.ks.no/innsyn/skjema.fil.v1.json",
+  "id": "https://fiks.ks.no/innsyn/domain/skjema.fil.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Innsyn Skjemafil V1",
   "description": "Fil for bruk i skjema",
@@ -15,25 +15,25 @@
   ],
   "properties": {
     "nedlastingslenke": {
-      "$ref": "string.not.blank.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Url til nedlasting av fil"
     },
     "filnavn": {
-      "$ref": "string.not.blank.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Filnavn",
       "examples": [
         "skjema.pdf"
       ]
     },
     "mimeType": {
-      "$ref": "string.not.blank.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "MimeType på fil",
       "examples": [
         "application/pdf"
       ]
     },
     "size": {
-      "$ref": "int64.json",
+      "$ref": "../types/int64.json",
       "description": "Størrelse på fil i bytes"
     }
   }

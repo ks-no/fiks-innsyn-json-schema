@@ -1,15 +1,13 @@
 {
-  "id": "https://fiks.ks.no/innsyn/innsendt.skjema.v1.json",
+  "id": "https://fiks.ks.no/innsyn/domain/skjema.kladd.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Innsyn Innsendt Skjema V1",
-  "description": "Melding som beskriver et innsendt skjema",
+  "title": "Innsyn Skjemakladd V1",
+  "description": "Melding som beskriver en skjemakladd",
   "type": "object",
   "required": [
     "tittel",
-    "mottaker",
-    "avsender",
-    "innsendtdato",
-    "skjemafil"
+    "endretDato",
+    "url"
   ],
   "properties": {
     "tittel": {
@@ -20,22 +18,22 @@
       ]
     },
     "mottaker": {
+      "$ref": "../types/string.nullable.json",
       "description": "Navn på mottaker av skjema",
-      "type": "string",
       "examples": [
         "Bergen kommune boligetaten"
       ]
     },
     "avsender": {
+      "$ref": "../types/string.nullable.json",
       "description": "Navn på avsender av skjema",
-      "type": "string",
       "examples": [
         "Ola Nordmann"
       ]
     },
-    "innsendtdato": {
-      "$ref": "int64.json",
-      "description": "Dato for når skjemaet var innsendt. Uttrykket som millisekunder etter epoch"
+    "endretDato": {
+      "$ref": "../types/int64.json",
+      "description": "Dato for når skjemaet sist var endret/lagret. Uttrykket som millisekunder etter epoch"
     },
     "skjemafil": {
       "$ref": "skjema.fil.v1.json"
@@ -51,8 +49,8 @@
       }
     },
     "url": {
-      "$ref": "string.nullable.json",
-      "description": "Url til sak, eller videre saksgang i skjemaet"
+      "$ref": "../types/string.not.blank.json",
+      "description": "Url til skjema kladd for videre utfylling/sletting"
     },
     "korrelasjonId": {
       "$ref": "korrelasjon.id.json"

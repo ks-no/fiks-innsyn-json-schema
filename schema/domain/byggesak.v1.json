@@ -1,5 +1,5 @@
 {
-  "id": "https://fiks.ks.no/innsyn/byggesak.v1.json",
+  "id": "https://fiks.ks.no/innsyn/domain/byggesak.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Innsyn Byggesak V1",
   "description": "Melding som beskriver en byggesak",
@@ -32,10 +32,10 @@
       ],
       "properties": {
         "kodeverdi": {
-          "$ref": "string.not.blank.json"
+          "$ref": "../types/string.not.blank.json"
         },
         "kodebeskrivelse": {
-          "$ref": "string.not.blank.json"
+          "$ref": "../types/string.not.blank.json"
         }
       }
     },
@@ -89,7 +89,7 @@
       "properties": {
         "tittel": {
           "description": "Beskrivende tittel på dokumentet",
-          "$ref": "string.not.blank.json"
+          "$ref": "../types/string.not.blank.json"
         },
         "dokumenttype": {
           "$ref": "#/definitions/ByggesakDokumentTypeV1"
@@ -99,7 +99,7 @@
           "type": "string"
         },
         "dokumentsdato": {
-          "$ref": "int64.json",
+          "$ref": "../types/int64.json",
           "description": "Dato som er påført selve dokumentet.  Uttrykket som millisekunder etter epoch"
         },
         "vedtaksstatus": {
@@ -107,7 +107,7 @@
           "type": "string"
         },
         "vedtaksdato": {
-          "$ref": "int64.json"
+          "$ref": "../types/int64.json"
         },
         "versjon": {
           "type": "string"
@@ -134,52 +134,52 @@
       ],
       "properties": {
         "kodeverdi": {
-          "$ref": "string.not.blank.json"
+          "$ref": "../types/string.not.blank.json"
         },
         "kodebeskrivelse": {
-          "$ref": "string.not.blank.json"
+          "$ref": "../types/string.not.blank.json"
         }
       }
     }
   },
   "properties": {
     "tittel": {
-      "$ref": "string.not.blank.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Tittel for byggesaken"
     },
     "beskrivelse": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": "Beskrivelse av byggesaken"
     },
     "mappeId": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": ""
     },
     "sakstatus": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": ""
     },
     "saksdato": {
-      "$ref": "int64.json",
+      "$ref": "../types/int64.json",
       "description": "Datoen saken er opprettet. Uttrykket som millisekunder etter epoch"
     },
     "saksansvarlig": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": "Saksbehandler som er ansvarlig for saken"
     },
     "administrativEnhet": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": "Avdeling, team eller etat som behandler saken"
     },
     "adresse": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": "Adresse til tiltaket",
       "examples": [
         "Øvre Eksempelveien 35, 5073 BERGEN"
       ]
     },
     "avsluttetDato": {
-      "$ref": "int64.nullable.json",
+      "$ref": "../types/int64.nullable.json",
       "description": "Dato når saken er avsluttet"
     },
     "saksnummer": {
@@ -189,18 +189,18 @@
       "$ref": "#/definitions/ByggesakTiltakstypeV1"
     },
     "tiltakshaver": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": "Navn på tiltakshaver. Tiltakshaver er eier av søknaden og har et overordnet ansvar for det som bygges"
     },
     "ansvarligSoker": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": "Navn på ansvarlig søker. Ansvarlig søker har påtatt seg ansvaret for byggesøknaden og all kommunikasjon med kommunens byggesaksavdeling"
     },
     "matrikkelnummer": {
       "$ref": "#/definitions/ByggesakMatrikkelnummerV1"
     },
     "dokumentlistebeskrivelse": {
-      "$ref": "string.nullable.json",
+      "$ref": "../types/string.nullable.json",
       "description": "En beskrivelse av hva dokumentlisten inneholder. Feks om det er utvalge dokumenter i en sak eller alle dokumenter"
     },
     "dokumenter": {
