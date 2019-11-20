@@ -63,7 +63,6 @@
                     <targetPackage>no.ks.fiks.innsyn.schema.ekstern</targetPackage>
                     <includeAdditionalProperties>false</includeAdditionalProperties>
                     <generateBuilders>true</generateBuilders>
-                    <useCommonsLang3>true</useCommonsLang3>
                     <formatTypeMapping>
                         <int64>java.lang.Long</int64>
                     </formatTypeMapping>
