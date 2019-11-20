@@ -9,7 +9,7 @@
   </parent>
   <groupId>no.ks.fiks</groupId>
   <artifactId>innsyn-json-schema</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>${revision}${changelist}</version>
   <description>${project.artifactId}</description>
   <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
   <scm>
