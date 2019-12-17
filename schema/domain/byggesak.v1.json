@@ -4,6 +4,7 @@
   "title": "Innsyn Byggesak V1",
   "description": "Melding som beskriver en byggesak",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "tittel",
     "saksdato"
@@ -11,6 +12,7 @@
   "definitions": {
     "ByggesakSaksnummerV1": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "saksaar",
         "sakssekvensnummer"
@@ -26,6 +28,7 @@
     },
     "ByggesakTiltakstypeV1": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "kodeverdi",
         "kodebeskrivelse"
@@ -41,6 +44,7 @@
     },
     "ByggesakMatrikkelnummerV1": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "kommunenummer",
         "gardsnummer",
@@ -73,6 +77,7 @@
     },
     "ByggesakDokumentV1": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "tittel",
         "dokumenttype",
@@ -128,6 +133,7 @@
     },
     "ByggesakDokumentTypeV1": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "kodeverdi",
         "kodebeskrivelse"

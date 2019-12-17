@@ -4,6 +4,7 @@
   "title": "Innsyn Journalpost V1",
   "description": "Melding som beskriver en journalpost",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "registreringsId",
     "tittel",
@@ -14,6 +15,7 @@
     "JournalpostDokumentbeskrivelseV1": {
       "description": "Et dokument for en journalpost",
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "tittel",
         "filstorrelse",

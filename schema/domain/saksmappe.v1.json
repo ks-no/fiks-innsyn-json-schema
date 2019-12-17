@@ -4,6 +4,7 @@
   "title": "Innsyn Saksmappe V1",
   "description": "Melding som beskriver en saksmappe",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "mappeId",
     "tittel",

@@ -4,6 +4,7 @@
   "title": "Innsyn Skjemakladd V1",
   "description": "Melding som beskriver en skjemakladd",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "tittel",
     "endretDato",
