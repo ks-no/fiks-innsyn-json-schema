@@ -1,5 +1,5 @@
 {
-  "id": "https://fiks.ks.no/innsyn/domain/saksmappe.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/saksmappe.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Innsyn Saksmappe V1",
   "description": "Melding som beskriver en saksmappe",

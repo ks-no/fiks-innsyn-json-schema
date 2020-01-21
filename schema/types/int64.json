@@ -1,5 +1,5 @@
 {
-  "id": "https://fiks.ks.no/innsyn/types/int64.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/types/int64.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Int64",
   "description": "64-bits integer",

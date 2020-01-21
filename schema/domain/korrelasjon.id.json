@@ -1,5 +1,5 @@
 {
-  "id": "https://fiks.ks.no/innsyn/domain/korrelasjon.id.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/korrelasjon.id.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Innsyn Korrelasjonsid",
   "description": "Id for å sette denne meldingen i sammenheng med andre indekserte meldinger",
