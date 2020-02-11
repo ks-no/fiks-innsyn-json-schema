@@ -13,42 +13,126 @@
     "betalesTil",
     "belop"
   ],
+  "definitions": {
+    "FakturaPdfV1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tittel",
+        "lenke"
+      ],
+      "properties": {
+        "tittel": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "lenke": {
+          "$ref": "../types/string.not.blank.json"
+        }
+      }
+    },
+    "FakturastatusV1": {
+      "enum": [
+        "BETALT",
+        "IKKE_BETALT",
+        "PURRING"
+      ]
+    }
+  },
   "properties": {
     "tittel": {
       "$ref": "../types/string.not.blank.json",
-      "description": "Tittel for fakturaen",
+      "description": "Forklarende navn på faktura",
       "examples": [
-        "Parkeringsgebyr 11.05.18"
+        "Barnehage og SFO",
+        "Kommunale avgifter 1. kvartal 2020"
       ]
     },
     "fakturaDato": {
-      "$ref": "../types/int64.json",
-      "description": "Dato fakturaen er sendt. Dette feltet brukes som sorteringsdato. Uttrykket som millisekunder etter epoch"
+      "type": "string",
+      "format": "date",
+      "description": "Dato på ISO 8601-format, YYYY-MM-DD",
+      "examples": [
+        "2020-01-01",
+        "2100-12-31"
+      ]
     },
     "forfallDato": {
-      "$ref": "../types/int64.json",
-      "description": "Dato fakturaen forfaller. Uttrykket som millisekunder etter epoch"
+      "type": "string",
+      "format": "date",
+      "description": "Dato på ISO 8601-format, YYYY-MM-DD",
+      "examples": [
+        "2020-01-01",
+        "2100-12-31"
+      ]
+    },
+    "status": {
+      "description": "Status for faktura",
+      "$ref": "#/definitions/FakturastatusV1"
     },
     "fakturaMottaker": {
       "$ref": "../types/string.not.blank.json",
-      "description": "Mottaker for fakturaen",
+      "description": "Navn på mottaker av fakturaen",
       "examples": [
         "Ola Nordmann"
       ]
     },
     "betalesTil": {
       "$ref": "../types/string.not.blank.json",
-      "description": "Aktøren fakturaen skal betales til",
-      "examples": [
-        "Bergen Kommune"
-      ]
+      "description": "Navn på mottaker av betalingen"
     },
     "belop": {
       "$ref": "../types/string.not.blank.json",
-      "description": "Beløp. Oppfordres til å bruke beløp med to desimaler skilt av komma, men ingen validering gjøres på dette feltet",
+      "description": "Originalt fakturabeløp. Oppfordres til å bruke beløp med to desimaler skilt av komma, men ingen validering gjøres på dette feltet",
       "examples": [
         "350,00"
       ]
+    },
+    "gebyr": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Purregebyr som kommer i tillegg til originalt fakturabeløp.",
+      "examples": [
+        "350,00"
+      ]
+    },
+    "kontonummer": {
+      "$ref": "../types/string.not.blank.json",
+      "description": "Kontonummeret fakturaen skal betales til",
+      "examples": [
+        "5210 00 539187",
+        "521000539187"
+      ]
+    },
+    "kid": {
+      "$ref": "../types/string.not.blank.json",
+      "description": "KID-nummer for fakturaen",
+      "examples": [
+        "1843 4531 0800 3525",
+        "1843453108003525"
+      ]
+    },
+    "fakturanummer": {
+      "$ref": "../types/string.not.blank.json",
+      "description": "Fakturanummer for fakturaen"
+    },
+    "forsendelseskanal": {
+      "$ref": "../types/string.not.blank.json",
+      "description": "Kanalen fakturaen ble levert gjennom",
+      "examples": [
+        "Post",
+        "eFaktura",
+        "Digipost",
+        "e-Boks"
+      ]
+    },
+    "lenker": {
+      "description": "Liste med lenker til PDF for faktura. Original faktura legges først, med eventuelle purringer etter.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/FakturaPdfV1"
+      }
     },
     "korrelasjonId": {
       "$ref": "korrelasjon.id.json"
