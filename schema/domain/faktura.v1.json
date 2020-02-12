@@ -11,11 +11,13 @@
     "forfallDato",
     "fakturaMottaker",
     "betalesTil",
-    "belop"
+    "belop",
+    "totalbelop"
   ],
   "definitions": {
     "FakturaPdfV1": {
       "type": "object",
+      "description": "Tittel og lenke til faktura-PDF",
       "additionalProperties": false,
       "required": [
         "tittel",
@@ -36,6 +38,26 @@
         "IKKE_BETALT",
         "PURRING"
       ]
+    },
+    "FakturaBelopV1": {
+      "type": "object",
+      "description": "Beløp i norske kroner, oppgitt i kroner og øre",
+      "additionalProperties": false,
+      "required": [
+        "kroner",
+        "ore"
+      ],
+      "properties": {
+        "kroner": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ore": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 99
+        }
+      }
     }
   },
   "properties": {
@@ -81,32 +103,30 @@
       "description": "Navn på mottaker av betalingen"
     },
     "belop": {
-      "$ref": "../types/string.not.blank.json",
-      "description": "Originalt fakturabeløp. Oppfordres til å bruke beløp med to desimaler skilt av komma, men ingen validering gjøres på dette feltet",
-      "examples": [
-        "350,00"
-      ]
+      "$ref": "#/definitions/FakturaBelopV1",
+      "description": "Originalt fakturabeløp uten gebyrer"
     },
     "gebyr": {
-      "$ref": "../types/string.nullable.json",
-      "description": "Purregebyr som kommer i tillegg til originalt fakturabeløp.",
-      "examples": [
-        "350,00"
-      ]
+      "$ref": "#/definitions/FakturaBelopV1",
+      "description": "Purregebyr som kommer i tillegg til originalt fakturabeløp"
+    },
+    "totalbelop": {
+      "$ref": "#/definitions/FakturaBelopV1",
+      "description": "Totalbeløp med originalt fakturabeløp og gebyrer"
     },
     "kontonummer": {
-      "$ref": "../types/string.not.blank.json",
+      "type": "string",
+      "pattern": "^[0-9]+$",
       "description": "Kontonummeret fakturaen skal betales til",
       "examples": [
-        "5210 00 539187",
         "521000539187"
       ]
     },
     "kid": {
-      "$ref": "../types/string.not.blank.json",
+      "type": "string",
+      "pattern": "^[0-9]+$",
       "description": "KID-nummer for fakturaen",
       "examples": [
-        "1843 4531 0800 3525",
         "1843453108003525"
       ]
     },
