@@ -36,19 +36,6 @@
       "$ref": "../types/int64.json",
       "description": "Dato for når skjemaet sist var endret/lagret. Uttrykket som millisekunder etter epoch"
     },
-    "skjemafil": {
-      "$ref": "skjema.fil.v1.json"
-    },
-    "vedlegg": {
-      "description": "Vedlegg til skjema",
-      "type": [
-        "array",
-        "null"
-      ],
-      "items": {
-        "$ref": "skjema.fil.v1.json"
-      }
-    },
     "url": {
       "$ref": "../types/string.not.blank.json",
       "description": "Url til skjema kladd for videre utfylling/sletting"
