@@ -58,6 +58,16 @@
           "maximum": 99
         }
       }
+    },
+    "ForsendelseskanalV1": {
+      "enum": [
+        "AVTALEGIRO",
+        "EFAKTURA",
+        "POST",
+        "EPOST",
+        "DIGIPOST",
+        "EBOKS"
+      ]
     }
   },
   "properties": {
@@ -135,14 +145,8 @@
       "description": "Fakturanummer for fakturaen"
     },
     "forsendelseskanal": {
-      "$ref": "../types/string.not.blank.json",
       "description": "Kanalen fakturaen ble levert gjennom",
-      "examples": [
-        "Post",
-        "eFaktura",
-        "Digipost",
-        "e-Boks"
-      ]
+      "$ref": "#/definitions/ForsendelseskanalV1"
     },
     "lenker": {
       "description": "Liste med lenker til PDF for faktura. Original faktura legges først, med eventuelle purringer etter.",
