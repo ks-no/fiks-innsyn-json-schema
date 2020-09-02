@@ -17,17 +17,47 @@
   "definitions": {
     "FakturaPdfV1": {
       "type": "object",
-      "description": "Tittel og lenke til faktura-PDF",
+      "description": "Url for PDF-faktura",
+      "additionalProperties": false,
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "url": {
+          "$ref": "../types/string.not.blank.json"
+        }
+      }
+    },
+    "FakturaVedleggV1": {
+      "type": "object",
+      "description": "Tittel og url for PDF-vedlegg",
       "additionalProperties": false,
       "required": [
         "tittel",
-        "lenke"
+        "url"
       ],
       "properties": {
         "tittel": {
           "$ref": "../types/string.not.blank.json"
         },
-        "lenke": {
+        "url": {
+          "$ref": "../types/string.not.blank.json"
+        }
+      }
+    },
+    "FakturaLenkeV1": {
+      "type": "object",
+      "description": "Tittel og url for lenke",
+      "additionalProperties": false,
+      "required": [
+        "tittel",
+        "url"
+      ],
+      "properties": {
+        "tittel": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "url": {
           "$ref": "../types/string.not.blank.json"
         }
       }
@@ -36,7 +66,9 @@
       "enum": [
         "BETALT",
         "IKKE_BETALT",
-        "PURRING"
+        "INKASSOVARSEL",
+        "KORRIGERT",
+        "SENDT_INKASSO"
       ]
     },
     "FakturaBelopV1": {
@@ -59,7 +91,7 @@
         }
       }
     },
-    "ForsendelseskanalV1": {
+    "FakturaForsendelseskanalV1": {
       "enum": [
         "AVTALEGIRO",
         "EFAKTURA",
@@ -68,6 +100,28 @@
         "DIGIPOST",
         "EBOKS"
       ]
+    },
+    "FakturaKontaktinformasjonV1": {
+      "type": "object",
+      "description": "Kontaktinformasjon",
+      "additionalProperties": false,
+      "properties": {
+        "navn": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "telefonnummer": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "epost": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "fritekst": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "adresse": {
+          "$ref": "adresse.v1.json"
+        }
+      }
     }
   },
   "properties": {
@@ -120,9 +174,21 @@
       "$ref": "#/definitions/FakturaBelopV1",
       "description": "Purregebyr som kommer i tillegg til originalt fakturabeløp"
     },
+    "renter": {
+      "$ref": "#/definitions/FakturaBelopV1",
+      "description": "Renter som kommer i tillegg til originalt fakturabeløp"
+    },
+    "andreOmkostninger": {
+      "$ref": "#/definitions/FakturaBelopV1",
+      "description": "Omkostninger utenom gebyr og renter, som kommer i tillegg til originalt fakturabeløp"
+    },
     "totalbelop": {
       "$ref": "#/definitions/FakturaBelopV1",
       "description": "Totalbeløp med originalt fakturabeløp og gebyrer"
+    },
+    "utestaendeBelop": {
+      "$ref": "#/definitions/FakturaBelopV1",
+      "description": "Utestående beløp på fakturaen dersom den er delvis betalt"
     },
     "kontonummer": {
       "type": "string",
@@ -146,17 +212,49 @@
     },
     "forsendelseskanal": {
       "description": "Kanalen fakturaen ble levert gjennom",
-      "$ref": "#/definitions/ForsendelseskanalV1"
+      "$ref": "#/definitions/FakturaForsendelseskanalV1"
     },
-    "lenker": {
-      "description": "Liste med lenker til PDF for faktura. Original faktura legges først, med eventuelle purringer etter.",
+    "faktura": {
+      "description": "Gjeldende faktura",
+      "$ref": "#/definitions/FakturaPdfV1"
+    },
+    "fakturahistorikk": {
+      "description": "Liste med lenker til fakturaer som har blitt erstattet",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "$ref": "#/definitions/FakturaPdfV1"
+        "$ref": "#/definitions/FakturaVedleggV1"
       }
+    },
+    "vedlegg": {
+      "description": "Liste med lenker til ekstra PDFer for faktura",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/FakturaVedleggV1"
+      }
+    },
+    "lenker": {
+      "description": "Liste med lenker",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/FakturaLenkeV1"
+      }
+    },
+    "kontaktinformasjon": {
+      "description": "Kontaktinformasjon for fakturaavsender",
+      "$ref": "#/definitions/FakturaKontaktinformasjonV1"
+    },
+    "kontaktinformasjonInkasso": {
+      "description": "Kontaktinformasjon for inkassoselskap",
+      "$ref": "#/definitions/FakturaKontaktinformasjonV1"
     },
     "korrelasjonId": {
       "$ref": "korrelasjon.id.json"

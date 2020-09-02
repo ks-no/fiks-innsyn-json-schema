@@ -1,0 +1,41 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/adresse.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Adresse V1",
+  "description": "En postadresse",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "navn"
+  ],
+  "properties": {
+    "navn": {
+      "$ref": "../types/string.not.blank.json",
+      "description": "Navn"
+    },
+    "addresselinje1": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Første adresselinje"
+    },
+    "addresselinje2": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Andre adresselinje"
+    },
+    "addresselinje3": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Tredje adresselinje"
+    },
+    "poststed": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Poststed"
+    },
+    "postnummer": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Postnummer"
+    },
+    "land": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Land"
+    }
+  }
+}
