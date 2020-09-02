@@ -13,15 +13,15 @@
       "$ref": "../types/string.not.blank.json",
       "description": "Navn"
     },
-    "addresselinje1": {
+    "adresselinje1": {
       "$ref": "../types/string.nullable.json",
       "description": "Første adresselinje"
     },
-    "addresselinje2": {
+    "adresselinje2": {
       "$ref": "../types/string.nullable.json",
       "description": "Andre adresselinje"
     },
-    "addresselinje3": {
+    "adresselinje3": {
       "$ref": "../types/string.nullable.json",
       "description": "Tredje adresselinje"
     },
