@@ -12,7 +12,8 @@
     "fakturaMottaker",
     "betalesTil",
     "belop",
-    "totalbelop"
+    "totalbelop",
+    "status"
   ],
   "definitions": {
     "FakturaPdfV1": {
