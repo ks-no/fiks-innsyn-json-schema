@@ -72,26 +72,6 @@
         "SENDT_INKASSO"
       ]
     },
-    "FakturaBelopV1": {
-      "type": "object",
-      "description": "Beløp i norske kroner, oppgitt i kroner og øre",
-      "additionalProperties": false,
-      "required": [
-        "kroner",
-        "ore"
-      ],
-      "properties": {
-        "kroner": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "ore": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 99
-        }
-      }
-    },
     "FakturaForsendelseskanalV1": {
       "enum": [
         "AVTALEGIRO",
@@ -168,28 +148,58 @@
       "description": "Navn på mottaker av betalingen"
     },
     "belop": {
-      "$ref": "#/definitions/FakturaBelopV1",
-      "description": "Originalt fakturabeløp uten gebyrer"
+      "type": "number",
+      "description": "Originalt fakturabeløp uten gebyrer",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
     },
     "gebyr": {
-      "$ref": "#/definitions/FakturaBelopV1",
-      "description": "Purregebyr som kommer i tillegg til originalt fakturabeløp"
+      "type": "number",
+      "description": "Purregebyr som kommer i tillegg til originalt fakturabeløp",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
     },
     "renter": {
-      "$ref": "#/definitions/FakturaBelopV1",
-      "description": "Renter som kommer i tillegg til originalt fakturabeløp"
+      "type": "number",
+      "description": "Renter som kommer i tillegg til originalt fakturabeløp",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
     },
     "andreOmkostninger": {
-      "$ref": "#/definitions/FakturaBelopV1",
-      "description": "Omkostninger utenom gebyr og renter, som kommer i tillegg til originalt fakturabeløp"
+      "type": "number",
+      "description": "Omkostninger utenom gebyr og renter, som kommer i tillegg til originalt fakturabeløp",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
     },
     "totalbelop": {
-      "$ref": "#/definitions/FakturaBelopV1",
-      "description": "Totalbeløp med originalt fakturabeløp og gebyrer"
+      "type": "number",
+      "description": "Totalbeløp med originalt fakturabeløp og gebyrer",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
     },
     "utestaendeBelop": {
-      "$ref": "#/definitions/FakturaBelopV1",
-      "description": "Utestående beløp på fakturaen dersom den er delvis betalt"
+      "type": "number",
+      "description": "Utestående beløp på fakturaen dersom den er delvis betalt",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
     },
     "kontonummer": {
       "type": "string",
