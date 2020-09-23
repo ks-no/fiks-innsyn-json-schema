@@ -14,27 +14,27 @@
       "description": "Navn"
     },
     "adresselinje1": {
-      "$ref": "../types/string.nullable.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Første adresselinje"
     },
     "adresselinje2": {
-      "$ref": "../types/string.nullable.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Andre adresselinje"
     },
     "adresselinje3": {
-      "$ref": "../types/string.nullable.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Tredje adresselinje"
     },
     "poststed": {
-      "$ref": "../types/string.nullable.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Poststed"
     },
     "postnummer": {
-      "$ref": "../types/string.nullable.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Postnummer"
     },
     "land": {
-      "$ref": "../types/string.nullable.json",
+      "$ref": "../types/string.not.blank.json",
       "description": "Land"
     }
   }

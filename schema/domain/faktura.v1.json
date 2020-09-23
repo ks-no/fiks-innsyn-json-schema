@@ -185,7 +185,7 @@
     },
     "totalbelop": {
       "type": "number",
-      "description": "Totalbeløp med originalt fakturabeløp og gebyrer",
+      "description": "Totalbeløp med originalt fakturabeløp og omkostninger",
       "examples": [
         1032,
         50.8,
