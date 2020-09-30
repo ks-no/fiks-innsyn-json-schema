@@ -3,7 +3,10 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Adresse V1",
   "description": "En postadresse",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "additionalProperties": false,
   "required": [
     "navn"
@@ -14,27 +17,27 @@
       "description": "Navn"
     },
     "adresselinje1": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Første adresselinje"
     },
     "adresselinje2": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Andre adresselinje"
     },
     "adresselinje3": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Tredje adresselinje"
     },
     "poststed": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Poststed"
     },
     "postnummer": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Postnummer"
     },
     "land": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Land"
     }
   }

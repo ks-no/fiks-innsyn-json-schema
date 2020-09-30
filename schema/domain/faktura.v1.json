@@ -101,16 +101,16 @@
       "additionalProperties": false,
       "properties": {
         "navn": {
-          "$ref": "../types/string.not.blank.json"
+          "$ref": "../types/string.nullable.not.blank.json"
         },
         "telefonnummer": {
-          "$ref": "../types/string.not.blank.json"
+          "$ref": "../types/string.nullable.not.blank.json"
         },
         "epost": {
-          "$ref": "../types/string.not.blank.json"
+          "$ref": "../types/string.nullable.not.blank.json"
         },
         "fritekst": {
-          "$ref": "../types/string.not.blank.json"
+          "$ref": "../types/string.nullable.not.blank.json"
         },
         "adresse": {
           "$ref": "adresse.v1.json"
