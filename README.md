@@ -9,7 +9,7 @@ Maven-artefakt med ferdig genererte POJO-klasser finnes på Maven Central:
 <dependency>
     <groupId>no.ks.fiks</groupId>
     <artifactId>innsyn-json-schema</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
 </dependency>
 ```
 
