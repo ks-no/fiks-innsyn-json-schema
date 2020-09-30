@@ -17,7 +17,10 @@
   ],
   "definitions": {
     "FakturaPdfV1": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Url for PDF-faktura",
       "additionalProperties": false,
       "required": [
@@ -30,7 +33,10 @@
       }
     },
     "FakturaVedleggV1": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Tittel og url for PDF-vedlegg",
       "additionalProperties": false,
       "required": [
@@ -47,7 +53,10 @@
       }
     },
     "FakturaLenkeV1": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Tittel og url for lenke",
       "additionalProperties": false,
       "required": [
@@ -79,11 +88,15 @@
         "POST",
         "EPOST",
         "DIGIPOST",
-        "EBOKS"
+        "EBOKS",
+        null
       ]
     },
     "FakturaKontaktinformasjonV1": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Kontaktinformasjon",
       "additionalProperties": false,
       "properties": {
@@ -157,7 +170,10 @@
       ]
     },
     "gebyr": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Purregebyr som kommer i tillegg til originalt fakturabeløp",
       "examples": [
         1032,
@@ -166,7 +182,10 @@
       ]
     },
     "renter": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Renter som kommer i tillegg til originalt fakturabeløp",
       "examples": [
         1032,
@@ -175,7 +194,10 @@
       ]
     },
     "andreOmkostninger": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Omkostninger utenom gebyr og renter, som kommer i tillegg til originalt fakturabeløp",
       "examples": [
         1032,
@@ -193,7 +215,10 @@
       ]
     },
     "utestaendeBelop": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Utestående beløp på fakturaen dersom den er delvis betalt",
       "examples": [
         1032,
@@ -202,7 +227,10 @@
       ]
     },
     "kontonummer": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^[0-9]+$",
       "description": "Kontonummeret fakturaen skal betales til",
       "examples": [
@@ -210,7 +238,10 @@
       ]
     },
     "kid": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^[0-9]+$",
       "description": "KID-nummer for fakturaen",
       "examples": [
@@ -218,7 +249,7 @@
       ]
     },
     "fakturanummer": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Fakturanummer for fakturaen"
     },
     "forsendelseskanal": {

@@ -1,0 +1,11 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/types/string.nullable.not.blank.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "String Nullable Not Blank",
+  "description": "Streng som ikke består av kun whitespace characters, men kan være null",
+  "type": [
+    "string",
+    "null"
+  ],
+  "pattern": ".*\\S.*"
+}
