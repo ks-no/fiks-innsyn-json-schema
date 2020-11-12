@@ -49,7 +49,7 @@
     <jackson.version>2.10.3</jackson.version>
     <commons-lang.version>2.6</commons-lang.version>
     <jsonschema2pojo-maven-plugin.version>1.0.2</jsonschema2pojo-maven-plugin.version>
-    <revision>1.0.9</revision>
+    <revision>1.0.10</revision>
   </properties>
   <dependencies>
     <dependency>
