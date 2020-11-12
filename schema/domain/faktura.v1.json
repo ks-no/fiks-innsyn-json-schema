@@ -52,6 +52,35 @@
         }
       }
     },
+    "HistoriskFakturaV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "En tidligere faktura som har blitt erstattet",
+      "additionalProperties": false,
+      "required": [
+        "tittel",
+        "url"
+      ],
+      "properties": {
+        "tittel": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "url": {
+          "$ref": "../types/string.not.blank.json"
+        },
+        "fakturaDato": {
+          "type": "string",
+          "format": "date",
+          "description": "Fakturadato på ISO 8601-format, YYYY-MM-DD",
+          "examples": [
+            "2020-01-01",
+            "2100-12-31"
+          ]
+        }
+      }
+    },
     "FakturaLenkeV1": {
       "type": [
         "object",
@@ -261,13 +290,13 @@
       "$ref": "#/definitions/FakturaPdfV1"
     },
     "fakturahistorikk": {
-      "description": "Liste med lenker til fakturaer som har blitt erstattet",
+      "description": "Liste med fakturaer som har blitt erstattet",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "$ref": "#/definitions/FakturaVedleggV1"
+        "$ref": "#/definitions/HistoriskFakturaV1"
       }
     },
     "vedlegg": {
