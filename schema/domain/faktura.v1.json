@@ -180,7 +180,7 @@
     },
     "kanBetales": {
       "type": "boolean",
-      "description": "Markerer at fakturaen kan betales",
+      "description": "Markerer at fakturaen kan betales. Eksempler på fakturaer som ikke kan betales: Fakturaer som er betalt; Fakturaer som er korrigert til verdi som er 0; Faktura som er sendt til ekstern aktør.",
       "examples": [
         true,
         false
@@ -188,7 +188,7 @@
     },
     "korrigert": {
       "type": "boolean",
-      "description": "Markerer at fakturaen har blitt korrigert",
+      "description": "Markerer at fakturaen har blitt korrigert. Dette kan f.eks. være fordi det var en feil i original faktura eller en faktura er delbetalt og oppdatert.",
       "examples": [
         true,
         false
