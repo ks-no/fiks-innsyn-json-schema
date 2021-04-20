@@ -104,7 +104,7 @@
     "FakturastatusV1": {
       "enum": [
         "BETALT",
-        "UBETALT",
+        "IKKE_BETALT",
         "INKASSOVARSEL",
         "SENDT_INKASSO",
         "INKASSO"
@@ -194,14 +194,6 @@
         false
       ]
     },
-    "korrigertBeskrivelse": {
-      "type": "string",
-      "description": "Beskrivelse om hva som er blitt korrigert",
-      "examples": [
-        "Kredittnota for kanselert ordre",
-        "Korrigert barnehagefaktura med søskenrabatt"
-      ]
-    },
     "sendtTilEkstern": {
       "type": "boolean",
       "description": "Marker at fakturaen er sendt til ekstern håndtering",
@@ -210,12 +202,12 @@
         false
       ]
     },
-    "sendtTilEksternBeskrivelse": {
+    "beskrivelse": {
       "type": "string",
-      "description": "Beskrivelse om hvor fakturaene er sendt til",
+      "description": "Fritekst til å informere om endringer i faktura, eller om videre saksgang etc.",
       "examples": [
-        "Faktura er utløpt og sendt til Lindorf for videre behandling. Vennligst kontakt Lindorf for videre saksgang",
-        "Faktura er sendt til inkasso og håndteres videre av Kredinor."
+        "Kredittnota for kanselert ordre",
+        "Faktura er utløpt og sendt til Lindorf for videre behandling. Vennligst kontakt Lindorf for videre saksgang"
       ]
     },
     "fakturaMottaker": {
