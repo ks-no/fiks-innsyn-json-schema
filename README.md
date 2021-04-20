@@ -1,4 +1,6 @@
 # Fiks Innsyn JSON Schema
+[![Maven Central](https://img.shields.io/maven-central/v/no.ks.fiks/innsyn-json-schema)](https://search.maven.org/artifact/no.ks.fiks/innsyn-json-schema)
+![GitHub](https://img.shields.io/github/license/ks-no/fiks-innsyn-json-schema)
 
 Dette repoet inneholder JSON Schema-definisjoner for bruk mot indekseringstjenesten til Fiks Innsyn.
 
