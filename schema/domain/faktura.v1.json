@@ -104,10 +104,10 @@
     "FakturastatusV1": {
       "enum": [
         "BETALT",
-        "IKKE_BETALT",
+        "UBETALT",
         "INKASSOVARSEL",
-        "KORRIGERT",
-        "SENDT_INKASSO"
+        "SENDT_INKASSO",
+        "INKASSO"
       ]
     },
     "FakturaForsendelseskanalV1": {
@@ -178,6 +178,46 @@
       "description": "Status for faktura",
       "$ref": "#/definitions/FakturastatusV1"
     },
+    "kanBetales": {
+      "type": "boolean",
+      "description": "Markerer at fakturaen kan betales",
+      "examples": [
+        true,
+        false
+      ]
+    },
+    "korrigert": {
+      "type": "boolean",
+      "description": "Markerer at fakturaen har blitt korrigert",
+      "examples": [
+        true,
+        false
+      ]
+    },
+    "korrigertBeskrivelse": {
+      "type": "string",
+      "description": "Beskrivelse om hva som er blitt korrigert",
+      "examples": [
+        "Kredittnota for kanselert ordre",
+        "Korrigert barnehagefaktura med søskenrabatt"
+      ]
+    },
+    "sendtTilEkstern": {
+      "type": "boolean",
+      "description": "Marker at fakturaen er sendt til ekstern håndtering",
+      "examples": [
+        true,
+        false
+      ]
+    },
+    "sendtTilEksternBeskrivelse": {
+      "type": "string",
+      "description": "Beskrivelse om hvor fakturaene er sendt til",
+      "examples": [
+        "Faktura er utløpt og sendt til Lindorf for videre behandling. Vennligst kontakt Lindorf for videre saksgang",
+        "Faktura er sendt til inkasso og håndteres videre av Kredinor."
+      ]
+    },
     "fakturaMottaker": {
       "$ref": "../types/string.not.blank.json",
       "description": "Navn på mottaker av fakturaen",
@@ -198,6 +238,7 @@
         172.38
       ]
     },
+
     "gebyr": {
       "type": [
         "number",
