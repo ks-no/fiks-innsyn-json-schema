@@ -105,14 +105,15 @@
         },
         "dokumentsdato": {
           "$ref": "../types/int64.json",
-          "description": "Dato som er påført selve dokumentet.  Uttrykket som millisekunder etter epoch"
+          "description": "Dato som er påført selve dokumentet. Uttrykket som millisekunder etter epoch (1970-01-01 00:00:00, UTC). Kan være negativ."
         },
         "vedtaksstatus": {
           "description": "Referanse til dokument med uri",
           "type": "string"
         },
         "vedtaksdato": {
-          "$ref": "../types/int64.json"
+          "$ref": "../types/int64.json",
+          "description": "Dato for vedtak. Uttrykket som millisekunder etter epoch (1970-01-01 00:00:00, UTC). Kan være negativ."
         },
         "versjon": {
           "type": "string"
@@ -167,7 +168,7 @@
     },
     "saksdato": {
       "$ref": "../types/int64.json",
-      "description": "Datoen saken er opprettet. Uttrykket som millisekunder etter epoch"
+      "description": "Dato saken ble opprettet. Uttrykket som millisekunder etter epoch (1970-01-01 00:00:00, UTC). Kan være negativ."
     },
     "saksansvarlig": {
       "$ref": "../types/string.nullable.json",

@@ -36,7 +36,7 @@
     },
     "innsendtdato": {
       "$ref": "../types/int64.json",
-      "description": "Dato for når skjemaet var innsendt. Uttrykket som millisekunder etter epoch"
+      "description": "Dato for når skjemaet ble innsendt. Uttrykket som millisekunder etter epoch (1970-01-01 00:00:00, UTC). Kan være negativ."
     },
     "skjemafil": {
       "$ref": "skjema.fil.v1.json"
