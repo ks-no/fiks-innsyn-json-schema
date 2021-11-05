@@ -281,7 +281,10 @@
       ]
     },
     "totalbelop": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Totalbeløp med originalt fakturabeløp og omkostninger",
       "examples": [
         1032,
