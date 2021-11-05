@@ -177,7 +177,10 @@
       "$ref": "#/definitions/FakturastatusV1"
     },
     "kanBetales": {
-      "type": "boolean",
+      "type": [
+        "boolean",
+        "null"
+      ],
       "description": "Markerer at fakturaen kan betales. Eksempler på fakturaer som ikke kan betales: Fakturaer som er betalt; Fakturaer som er korrigert til verdi som er 0; Faktura som er sendt til ekstern aktør",
       "examples": [
         true,
@@ -185,7 +188,10 @@
       ]
     },
     "korrigert": {
-      "type": "boolean",
+      "type": [
+        "boolean",
+        "null"
+      ],
       "description": "Markerer at fakturaen har blitt korrigert. Dette kan f.eks. være fordi det var en feil i original faktura eller en faktura er delbetalt og oppdatert",
       "examples": [
         true,
@@ -193,7 +199,10 @@
       ]
     },
     "sendtTilEkstern": {
-      "type": "boolean",
+      "type": [
+        "boolean",
+        "null"
+      ],
       "description": "Marker at fakturaen er sendt til ekstern håndtering. F.eks. dersom ekstern aktør tar seg av inkassovarsel eller innkreving av inkassokrav",
       "examples": [
         true,
@@ -205,7 +214,10 @@
       "$ref": "#/definitions/FakturaLenkeV1"
     },
     "beskrivelse": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Fritekst til å informere om endringer i faktura, eller om videre saksgang etc.",
       "examples": [
         "Kredittnota for kanselert ordre",
