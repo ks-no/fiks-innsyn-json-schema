@@ -2,17 +2,20 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>no.ks.fiks.pom</groupId>
     <artifactId>fiks-ekstern-super-pom</artifactId>
     <version>1.0.5</version>
   </parent>
+
   <groupId>no.ks.fiks</groupId>
   <artifactId>innsyn-json-schema</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>1.2.0-SNAPSHOT</version>
   <name>innsyn-json-schema</name>
   <description>JSON schema-modeller for indeksering mot Fiks Innsyn</description>
   <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
+
   <licenses>
     <license>
       <name>MIT License</name>
@@ -20,6 +23,7 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
   <developers>
     <developer>
       <id>KS-fiks</id>
@@ -27,11 +31,13 @@
       <email>fiks-utvikling@ks.no</email>
     </developer>
   </developers>
+
   <scm>
     <connection>scm:git:git@github.com:ks-no/fiks-innsyn-json-schema.git</connection>
     <developerConnection>scm:git:git@github.com:ks-no/fiks-innsyn-json-schema.git</developerConnection>
     <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
   </scm>
+
   <distributionManagement>
     <repository>
       <id>oss.sonatype.org</id>
@@ -42,15 +48,15 @@
       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
+
   <properties>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <changelist>-SNAPSHOT</changelist>
     <maven.compiler.source>1.8</maven.compiler.source>
     <jackson.version>2.13.0</jackson.version>
     <commons-lang.version>2.6</commons-lang.version>
     <jsonschema2pojo-maven-plugin.version>1.1.1</jsonschema2pojo-maven-plugin.version>
-    <revision>1.1.1</revision>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>commons-lang</groupId>
@@ -63,6 +69,7 @@
       <version>${jackson.version}</version>
     </dependency>
   </dependencies>
+
   <build>
     <resources>
       <resource>
