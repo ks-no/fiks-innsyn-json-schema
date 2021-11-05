@@ -12,7 +12,6 @@
     "fakturaMottaker",
     "betalesTil",
     "belop",
-    "totalbelop",
     "status"
   ],
   "definitions": {
@@ -106,8 +105,7 @@
         "BETALT",
         "IKKE_BETALT",
         "INKASSOVARSEL",
-        "SENDT_INKASSO",
-        "INKASSO"
+        "SENDT_INKASSO"
       ]
     },
     "FakturaForsendelseskanalV1": {
@@ -201,6 +199,10 @@
         true,
         false
       ]
+    },
+    "eksternLenke": {
+      "description": "Lenke til ekstern behandler, vises dersom sendtTilEkstern er true",
+      "$ref": "#/definitions/FakturaLenkeV1"
     },
     "beskrivelse": {
       "type": "string",
