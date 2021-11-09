@@ -128,7 +128,8 @@
       "additionalProperties": false,
       "properties": {
         "navn": {
-          "$ref": "../types/string.nullable.not.blank.json"
+          "$ref": "../types/string.nullable.not.blank.json",
+          "description": "Deprecated. Bruk navn i adresse."
         },
         "telefonnummer": {
           "$ref": "../types/string.nullable.not.blank.json"
