@@ -8,9 +8,6 @@
     "null"
   ],
   "additionalProperties": false,
-  "required": [
-    "navn"
-  ],
   "properties": {
     "navn": {
       "$ref": "../types/string.not.blank.json",
