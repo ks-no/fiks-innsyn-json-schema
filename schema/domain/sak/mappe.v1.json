@@ -60,19 +60,19 @@
         "2022-03-16T14:10:11+0000"
       ]
     },
-    "faser": {
-      "description": "Liste med sakens faser",
+    "milepeler": {
+      "description": "Liste med sakens milepeler",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "$ref": "fase.v1.json"
+        "$ref": "milepel.v1.json"
       }
     },
-    "navaerendeFase": {
-      "description": "Nåværende fase for saken",
-      "$ref": "fase.v1.json"
+    "navaerendeMilepel": {
+      "description": "Nåværende milepel for saken",
+      "$ref": "milepel.v1.json"
     },
     "saksdato": {
       "description": "Tidspunkt for når saken ble opprettet på ISO 8601-format",
@@ -95,9 +95,15 @@
         "$ref": "lenke.v1.json"
       }
     },
-    "edialogskjema": {
-      "description": "Edialog-skjema for å sende svar til et organisasjonsnummer via SvarUt",
-      "$ref": "edialog.skjema.v1.json"
+    "edialogSkjemaer": {
+      "description": "Liste med edialog-skjema for å sende svar til et organisasjonsnummer via SvarUt",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "edialog.skjema.v1.json"
+      }
     }
   }
 }

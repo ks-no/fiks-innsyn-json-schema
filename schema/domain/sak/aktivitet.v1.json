@@ -1,7 +1,7 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/aktivitetslogg.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/aktivitet.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Aktivitetslogg V1",
+  "title": "Aktivitet V1",
   "description": "Aktivitet utført på en melding",
   "type": [
     "object",
@@ -25,9 +25,9 @@
         "2022-03-16T14:10:11+0000"
       ]
     },
-    "beskrivelse": {
-      "description": "Utfyllende beskrivelse av aktiviteten",
-      "$ref": "../../types/string.nullable.json"
+    "part": {
+      "description": "Part som utførte aktiviteten",
+      "$ref": "part.v1.json"
     }
   }
 }

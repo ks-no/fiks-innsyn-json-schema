@@ -1,8 +1,8 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/fase.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/milepel.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Fase V1",
-  "description": "Fase i en sak",
+  "title": "Milepel V1",
+  "description": "Milepel i en sak",
   "type": [
     "object",
     "null"
@@ -14,18 +14,18 @@
   ],
   "properties": {
     "navn": {
-      "description": "Navn på fase",
+      "description": "Navn på milepel",
       "$ref": "../../types/string.not.blank.json"
     },
     "dato": {
-      "description": "Dato for når fasen begynner på ISO 8601-format",
+      "description": "Dato for når milepelen begynner på ISO 8601-format",
       "$ref": "../../types/string.not.blank.json",
       "examples": [
         "2022-03-16T14:10:11+0000"
       ]
     },
     "beskrivelse": {
-      "description": "Beskrivelse av fasen",
+      "description": "Beskrivelse av milepelen",
       "$ref": "../../types/string.nullable.json"
     }
   }

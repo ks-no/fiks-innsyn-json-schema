@@ -38,11 +38,11 @@
     },
     "journalpostnummer": {
       "description": "Viser rekkefølgen på journalpostene innenfor saksmappen",
-      "$ref": "../../types/string.nullable.json"
+      "$ref": "../../types/int.nullable.json"
     },
     "journalaar": {
       "description": "Viser året journalposten ble opprettet",
-      "$ref": "../../types/string.nullable.json"
+      "$ref": "../../types/int.nullable.json"
     },
     "journaldato": {
       "description": "Journaldato på ISO 8601-format",
@@ -76,7 +76,7 @@
         "null"
       ],
       "items": {
-        "$ref": "aktivitetslogg.v1.json"
+        "$ref": "aktivitet.v1.json"
       }
     },
     "lenker": {
@@ -89,9 +89,15 @@
         "$ref": "lenke.v1.json"
       }
     },
-    "edialogskjema": {
-      "description": "Edialog-skjema for å sende svar til et organisasjonsnummer via SvarUt",
-      "$ref": "edialog.skjema.v1.json"
+    "edialogSkjemaer": {
+      "description": "Liste med edialog-skjema for å sende svar til et organisasjonsnummer via SvarUt",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "edialog.skjema.v1.json"
+      }
     },
     "klagefrist": {
       "description": "Dato for klagefrist på ISO 8601-format",
@@ -104,9 +110,15 @@
       "description": "Virksomhet eller person som arkivskaper mottar eller sender arkivdokumenter til",
       "$ref": "korrespondansepart.v1.json"
     },
-    "dokument": {
+    "dokumenter": {
       "description": "Liste med dokumenter tilknyttet journalposten",
-      "$ref": "dokument.v1.json"
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "dokument.v1.json"
+      }
     },
     "korrelasjonId": {
       "$ref": "../korrelasjon.id.json"

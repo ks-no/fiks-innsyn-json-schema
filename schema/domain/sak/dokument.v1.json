@@ -15,7 +15,7 @@
     "tittel"
   ],
   "properties": {
-    "navn": {
+    "filnavn": {
       "description": "Dokumentets filnavn",
       "$ref": "../../types/string.not.blank.json"
     },

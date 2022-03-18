@@ -1,8 +1,8 @@
 {
   "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/edialog.skjema.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Edialog-skjema V1",
-  "description": "Informasjon for skjema som brukes til innsending via eDialog",
+  "title": "eDialog-skjema V1",
+  "description": "Informasjon for eDialog-skjema som brukes til innsending via eDialog",
   "type": [
     "object",
     "null"
@@ -15,7 +15,7 @@
   ],
   "properties": {
     "tittel": {
-      "description": "Tittel på skjema",
+      "description": "Tittel på eDialog-skjema",
       "$ref": "../../types/string.not.blank.json"
     },
     "mottaker": {
@@ -23,27 +23,27 @@
       "$ref": "../../types/string.not.blank.json"
     },
     "navn": {
-      "description": "Navn på skjema",
+      "description": "Navn på eDialog-skjema",
       "$ref": "../../types/string.not.blank.json"
     },
     "beskrivelse": {
-      "description": "Beskrivelse av skjema",
+      "description": "Beskrivelse av eDialog-skjema",
       "$ref": "../../types/string.nullable.json"
     },
     "ferdigutfyltTittel": {
-      "description": "Beskrivelse av skjema",
+      "description": "Tittel som forhåndsutfylles i eDialog-skjema",
       "$ref": "../../types/string.nullable.json"
     },
     "ferdigutfyltTekst": {
-      "description": "Beskrivelse av skjema",
+      "description": "Tekst som forhåndsutfylles i eDialog-skjema",
       "$ref": "../../types/string.nullable.json"
     },
     "sakssekvensnummer": {
-      "description": "Beskrivelse av skjema",
+      "description": "Sakssekvensnummer for saken skjemaet gjelder",
       "$ref": "../../types/int.nullable.json"
     },
     "saksaar": {
-      "description": "Beskrivelse av skjema",
+      "description": "Saksår for saken skjemaet gjelder",
       "$ref": "../../types/int.nullable.json"
     },
     "svarUtForsendelseId": {
