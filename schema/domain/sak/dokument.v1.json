@@ -1,0 +1,48 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/dokument.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Saksdokument V1",
+  "description": "Dokument tilknyttet en sak",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "filnavn",
+    "storrelse",
+    "mimeType",
+    "tittel"
+  ],
+  "properties": {
+    "navn": {
+      "description": "Dokumentets filnavn",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "storrelse": {
+      "description": "Dokumentets storrelse i bytes",
+      "$ref": "../../types/int64.json"
+    },
+    "mimeType": {
+      "description": "Dokumentes MIME type",
+      "$ref": "../../types/string.not.blank.json",
+      "examples": [
+        "application/pdf",
+        "image/jpeg",
+        "text/plain"
+      ]
+    },
+    "tittel": {
+      "description": "Dokumentes tittel/visningsnavn",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "lenke": {
+      "description": "Nedlastingslenke for dokument",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "svarUtFilnummer": {
+      "description": "Nummer i rekken av dokumenter dersom dokumentet er tilknyttet en SvarUt-forsendelse",
+      "$ref": "../../types/int.nullable.json"
+    }
+  }
+}

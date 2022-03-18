@@ -1,0 +1,118 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/journalpost.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Journalpost V1",
+  "description": "Melding som beskriver en journalpost",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "journalposttype",
+    "tittel"
+  ],
+  "properties": {
+    "journalposttype": {
+      "description": "Noark journalposttype. Mulige verdier: I - inngående dokument, U - utgående dokument, N - organinternt dokument for oppfølging, X - organinternt dokument uten oppfølging, S - saksframlegg",
+      "enum": [
+        "I",
+        "U",
+        "N",
+        "X",
+        "S"
+      ]
+    },
+    "tittel": {
+      "description": "Tittel eller navn på arkivenheten",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "mappeId": {
+      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "systemId": {
+      "description": "Globalt unik identifikasjon av arkivenheten",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "registreringsId": {
+      "description": "Entydig identifikasjon av registreringen innenfor arkivet",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "journalpostnummer": {
+      "description": "Viser rekkefølgen på journalpostene innenfor saksmappen",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "journalaar": {
+      "description": "Viser året journalposten ble opprettet",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "journaldato": {
+      "description": "Journaldato på ISO 8601-format",
+      "$ref": "../../types/string.nullable.json",
+      "examples": [
+        "2022-03-16T14:10:11+0000"
+      ]
+    },
+    "svarUtForsendelseId": {
+      "description": "Forsendelse-id dersom dette er sendt via SvarUt til personen denne journalposten er indeksert for",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "eksponertFor": {
+      "description": "Parter som har tilgang til denne journalposten",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "part.v1.json"
+      }
+    },
+    "beskrivelse": {
+      "description": "Tekstlig beskrivelse av arkivenheten",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "aktivitetslogg": {
+      "description": "Logg over aktiviterer utført på denne journalposten",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "aktivitetslogg.v1.json"
+      }
+    },
+    "lenker": {
+      "description": "Liste med lenker",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "lenke.v1.json"
+      }
+    },
+    "edialogskjema": {
+      "description": "Edialog-skjema for å sende svar til et organisasjonsnummer via SvarUt",
+      "$ref": "edialog.skjema.v1.json"
+    },
+    "klagefrist": {
+      "description": "Dato for klagefrist på ISO 8601-format",
+      "$ref": "../../types/string.nullable.json",
+      "examples": [
+        "2022-03-16T14:10:11+0000"
+      ]
+    },
+    "korrespondansepart": {
+      "description": "Virksomhet eller person som arkivskaper mottar eller sender arkivdokumenter til",
+      "$ref": "korrespondansepart.v1.json"
+    },
+    "dokument": {
+      "description": "Liste med dokumenter tilknyttet journalposten",
+      "$ref": "dokument.v1.json"
+    },
+    "korrelasjonId": {
+      "$ref": "../korrelasjon.id.json"
+    },
+    "forelder": {
+      "$ref": "../forelder.json"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/korrespondansepart.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Korrespondansepart V1",
+  "description": "Korrespondansepart i en sak",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "korrespondanseparttype",
+    "korrespondansepartNavn"
+  ],
+  "properties": {
+    "type": {
+      "description": "Korrespondansepartens type",
+      "enum": [
+        "ORGANISASJON",
+        "PERSON"
+      ]
+    },
+    "korrespondanseparttype": {
+      "description": "Noark korrespondanseparttype. Mulige verdier: EA - avsender, EM - mottaker, EK - kopimottaker, IA - intern avsender, IM - intern mottaker, IK, intern kopimottaker",
+      "enum": [
+        "EA",
+        "EM",
+        "EK",
+        "IA",
+        "IM",
+        "IK"
+      ]
+    },
+    "korrespondansepartNavn": {
+      "description": "Navn på virksomhet eller person som er korrespondansepart",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "korrespondansepartId": {
+      "description": "Unik ID for en korrespondansepart",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "adresse": {
+      "description": "Adresse for korrespondansepart",
+      "$ref": "../adresse.v1.json"
+    },
+    "epost": {
+      "description": "Epost for korrespondansepart",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
+    "telefonnummer": {
+      "description": "Telefonnummer for korrespondansepart",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
+    "orgnr": {
+      "description": "Organisasjonsnummer for korrespondansepart dersom det er en organisasjon",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
+    "kontaktperson": {
+      "description": "Kontaktperson hos korrespondansepart dersom det er en organisasjon",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    }
+  }
+}

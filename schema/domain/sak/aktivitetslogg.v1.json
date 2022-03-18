@@ -1,0 +1,33 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/aktivitetslogg.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Aktivitetslogg V1",
+  "description": "Aktivitet utført på en melding",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "hendelse",
+    "dato",
+    "part"
+  ],
+  "properties": {
+    "hendelse": {
+      "description": "Kort navn på aktivitet",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "dato": {
+      "description": "Dato for når aktiviteten ble utført på ISO 8601-format",
+      "$ref": "../../types/string.not.blank.json",
+      "examples": [
+        "2022-03-16T14:10:11+0000"
+      ]
+    },
+    "beskrivelse": {
+      "description": "Utfyllende beskrivelse av aktiviteten",
+      "$ref": "../../types/string.nullable.json"
+    }
+  }
+}

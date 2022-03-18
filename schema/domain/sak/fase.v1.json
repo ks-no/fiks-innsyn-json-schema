@@ -1,0 +1,32 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/fase.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Fase V1",
+  "description": "Fase i en sak",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "navn",
+    "dato"
+  ],
+  "properties": {
+    "navn": {
+      "description": "Navn på fase",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "dato": {
+      "description": "Dato for når fasen begynner på ISO 8601-format",
+      "$ref": "../../types/string.not.blank.json",
+      "examples": [
+        "2022-03-16T14:10:11+0000"
+      ]
+    },
+    "beskrivelse": {
+      "description": "Beskrivelse av fasen",
+      "$ref": "../../types/string.nullable.json"
+    }
+  }
+}

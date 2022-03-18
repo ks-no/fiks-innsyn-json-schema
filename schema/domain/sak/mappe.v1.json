@@ -1,0 +1,103 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/mappe.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Mappe V1",
+  "description": "Melding som beskriver en mappe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "tittel"
+  ],
+  "properties": {
+    "type": {
+      "description": "Mappens type",
+      "enum": [
+        "BARNEVERNSSAK"
+      ]
+    },
+    "tittel": {
+      "description": "Tittel eller navn på arkivenheten",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "mappeId": {
+      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "systemId": {
+      "description": "Globalt unik identifikasjon av arkivenheten",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "beskrivelse": {
+      "description": "Tekstlig beskrivelse av arkivenheten",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "parter": {
+      "description": "Liste med sakens parter",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "part.v1.json"
+      }
+    },
+    "minPart": {
+      "description": "Part for personen mappen er indeksert for",
+      "$ref": "part.v1.json"
+    },
+    "sistOppdatert": {
+      "description": "Tidspunkt for siste oppdatering på ISO 8601-format",
+      "$ref": "../../types/string.nullable.json",
+      "examples": [
+        "2022-03-16T14:10:11+0000"
+      ]
+    },
+    "avsluttet": {
+      "description": "Tidspunkt for når saken ble avsluttet på ISO 8601-format",
+      "$ref": "../../types/string.nullable.json",
+      "examples": [
+        "2022-03-16T14:10:11+0000"
+      ]
+    },
+    "faser": {
+      "description": "Liste med sakens faser",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "fase.v1.json"
+      }
+    },
+    "navaerendeFase": {
+      "description": "Nåværende fase for saken",
+      "$ref": "fase.v1.json"
+    },
+    "saksdato": {
+      "description": "Tidspunkt for når saken ble opprettet på ISO 8601-format",
+      "$ref": "../../types/string.nullable.not.blank.json",
+      "examples": [
+        "2022-03-16T14:10:11+0000"
+      ]
+    },
+    "saksansvarlig": {
+      "description": "Navn på person som er saksansvarlig",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "lenker": {
+      "description": "Liste med lenker",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "lenke.v1.json"
+      }
+    },
+    "edialogskjema": {
+      "description": "Edialog-skjema for å sende svar til et organisasjonsnummer via SvarUt",
+      "$ref": "edialog.skjema.v1.json"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/edialog.skjema.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Edialog-skjema V1",
+  "description": "Informasjon for skjema som brukes til innsending via eDialog",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "tittel",
+    "mottaker",
+    "navn"
+  ],
+  "properties": {
+    "tittel": {
+      "description": "Tittel på skjema",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "mottaker": {
+      "description": "Organisasjonsnummer for mottaker",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "navn": {
+      "description": "Navn på skjema",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "beskrivelse": {
+      "description": "Beskrivelse av skjema",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "ferdigutfyltTittel": {
+      "description": "Beskrivelse av skjema",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "ferdigutfyltTekst": {
+      "description": "Beskrivelse av skjema",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "sakssekvensnummer": {
+      "description": "Beskrivelse av skjema",
+      "$ref": "../../types/int.nullable.json"
+    },
+    "saksaar": {
+      "description": "Beskrivelse av skjema",
+      "$ref": "../../types/int.nullable.json"
+    },
+    "svarUtForsendelseId": {
+      "description": "Forsendelse id dersom dette er et svar på en SvarUt forsendelse",
+      "$ref": "../../types/string.nullable.json"
+    }
+  }
+}
