@@ -245,6 +245,15 @@
         172.38
       ]
     },
+    "innbetaltBelop": {
+      "type": "number",
+      "description": "Innbetalt beløp",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
+    },
     "gebyr": {
       "type": [
         "number",
