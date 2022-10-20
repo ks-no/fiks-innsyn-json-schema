@@ -246,7 +246,10 @@
       ]
     },
     "innbetaltBelop": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "description": "Innbetalt beløp",
       "examples": [
         1032,
