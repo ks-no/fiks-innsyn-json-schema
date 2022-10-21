@@ -26,6 +26,9 @@
         "url"
       ],
       "properties": {
+        "tittel": {
+          "$ref": "../types/string.nullable.not.blank.json"
+        },
         "url": {
           "$ref": "../types/string.not.blank.json"
         }
