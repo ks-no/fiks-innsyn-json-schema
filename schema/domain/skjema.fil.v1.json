@@ -11,8 +11,7 @@
   "required": [
     "nedlastingslenke",
     "filnavn",
-    "mimeType",
-    "size"
+    "mimeType"
   ],
   "properties": {
     "nedlastingslenke": {
@@ -34,7 +33,7 @@
       ]
     },
     "size": {
-      "$ref": "../types/int64.json",
+      "$ref": "../types/int64.nullable.json",
       "description": "Størrelse på fil i bytes"
     }
   }
