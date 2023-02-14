@@ -26,6 +26,9 @@
         "url"
       ],
       "properties": {
+        "tittel": {
+          "$ref": "../types/string.nullable.not.blank.json"
+        },
         "url": {
           "$ref": "../types/string.not.blank.json"
         }
@@ -239,6 +242,18 @@
     "belop": {
       "type": "number",
       "description": "Originalt fakturabeløp uten gebyrer",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
+    },
+    "innbetaltBelop": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Innbetalt beløp",
       "examples": [
         1032,
         50.8,
