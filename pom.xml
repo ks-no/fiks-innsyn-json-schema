@@ -6,12 +6,12 @@
   <parent>
     <groupId>no.ks.fiks.pom</groupId>
     <artifactId>fiks-ekstern-super-pom</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.18</version>
   </parent>
 
   <groupId>no.ks.fiks</groupId>
   <artifactId>innsyn-json-schema</artifactId>
-  <version>1.2.2-SNAPSHOT</version>
+  <version>1.2.5-SNAPSHOT</version>
   <name>innsyn-json-schema</name>
   <description>JSON schema-modeller for indeksering mot Fiks Innsyn</description>
   <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
@@ -54,9 +54,9 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.javadoc.skip>true</maven.javadoc.skip>
 
-    <jackson.version>2.13.0</jackson.version>
+    <jackson.version>2.13.4.2</jackson.version>
     <commons-lang.version>2.6</commons-lang.version>
-    <jsonschema2pojo-maven-plugin.version>1.1.1</jsonschema2pojo-maven-plugin.version>
+    <jsonschema2pojo-maven-plugin.version>1.1.2</jsonschema2pojo-maven-plugin.version>
   </properties>
 
   <dependencies>
