@@ -1,0 +1,65 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/part.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Part V1",
+  "description": "Part i en sak",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "partRolle",
+    "partNavn",
+    "partId"
+  ],
+  "properties": {
+    "type": {
+      "description": "Partens type",
+      "enum": [
+        "ORGANISASJON",
+        "PERSON"
+      ]
+    },
+    "partRolle": {
+      "description": "Angivelse av rollen til parten",
+      "$ref": "../../types/string.not.blank.json",
+      "examples": [
+        "Eier",
+        "Søker",
+        "Nabo",
+        "Far",
+        "Barn"
+      ]
+    },
+    "partNavn": {
+      "description": "Navn på virksomhet eller person som er part",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "partId": {
+      "description": "Unik ID for en part",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "adresse": {
+      "description": "Adresse for en part",
+      "$ref": "../adresse.v1.json"
+    },
+    "epost": {
+      "description": "Epost for en part",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
+    "telefonnummer": {
+      "description": "Telefonnummer for en part",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
+    "orgnr": {
+      "description": "Organisasjonsnummer for part dersom det er en organisasjon",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
+    "kontaktperson": {
+      "description": "Kontaktperson hos part dersom det er en organisasjon",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    }
+  }
+}
