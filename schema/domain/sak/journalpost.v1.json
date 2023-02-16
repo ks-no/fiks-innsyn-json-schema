@@ -48,7 +48,7 @@
       "description": "Journaldato på ISO 8601-format",
       "$ref": "../../types/string.nullable.json",
       "examples": [
-        "2022-03-16T14:10:11+0000"
+        "2022-03-16T14:10:11+00:00"
       ]
     },
     "svarUtForsendelseId": {
@@ -103,7 +103,7 @@
       "description": "Dato for klagefrist på ISO 8601-format",
       "$ref": "../../types/string.nullable.json",
       "examples": [
-        "2022-03-16T14:10:11+0000"
+        "2022-03-16T14:10:11+00:00"
       ]
     },
     "korrespondansepart": {

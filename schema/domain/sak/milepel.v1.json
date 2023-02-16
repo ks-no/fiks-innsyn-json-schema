@@ -21,7 +21,7 @@
       "description": "Dato for når milepelen begynner på ISO 8601-format",
       "$ref": "../../types/string.not.blank.json",
       "examples": [
-        "2022-03-16T14:10:11+0000"
+        "2022-03-16T14:10:11+00:00"
       ]
     },
     "beskrivelse": {
