@@ -78,7 +78,7 @@
     },
     "saksdato": {
       "description": "Tidspunkt for når saken ble opprettet på ISO 8601-format",
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "examples": [
         "2022-03-16T14:10:11+00:00"
