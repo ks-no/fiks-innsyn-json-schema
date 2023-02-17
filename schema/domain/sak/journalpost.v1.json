@@ -46,7 +46,8 @@
     },
     "journaldato": {
       "description": "Journaldato på ISO 8601-format",
-      "$ref": "../../types/string.nullable.json",
+      "type": ["string", "null"],
+      "format": "date-time",
       "examples": [
         "2022-03-16T14:10:11+00:00"
       ]
@@ -101,7 +102,8 @@
     },
     "klagefrist": {
       "description": "Dato for klagefrist på ISO 8601-format",
-      "$ref": "../../types/string.nullable.json",
+      "type": ["string", "null"],
+      "format": "date-time",
       "examples": [
         "2022-03-16T14:10:11+00:00"
       ]

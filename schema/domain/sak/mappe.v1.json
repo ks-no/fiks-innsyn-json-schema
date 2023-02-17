@@ -48,14 +48,16 @@
     },
     "sistOppdatert": {
       "description": "Tidspunkt for siste oppdatering på ISO 8601-format",
-      "$ref": "../../types/string.nullable.json",
+      "type": ["string", "null"],
+      "format": "date-time",
       "examples": [
         "2022-03-16T14:10:11+00:00"
       ]
     },
     "avsluttet": {
       "description": "Tidspunkt for når saken ble avsluttet på ISO 8601-format",
-      "$ref": "../../types/string.nullable.json",
+      "type": ["string", "null"],
+      "format": "date-time",
       "examples": [
         "2022-03-16T14:10:11+00:00"
       ]
@@ -76,7 +78,8 @@
     },
     "saksdato": {
       "description": "Tidspunkt for når saken ble opprettet på ISO 8601-format",
-      "$ref": "../../types/string.nullable.not.blank.json",
+      "type": "string",
+      "format": "date-time",
       "examples": [
         "2022-03-16T14:10:11+00:00"
       ]
