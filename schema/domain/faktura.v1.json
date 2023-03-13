@@ -320,6 +320,18 @@
         172.38
       ]
     },
+    "kreditertBelop": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Beløp som har blitt kreditert",
+      "examples": [
+        1032,
+        50.8,
+        172.38
+      ]
+    },
     "kontonummer": {
       "type": [
         "string",
