@@ -17,12 +17,20 @@
       "description": "Navn på milepel",
       "$ref": "../../types/string.not.blank.json"
     },
-    "dato": {
+    "startdato": {
       "description": "Dato for når milepelen begynner på ISO 8601-format",
       "type": "string",
       "format": "date-time",
       "examples": [
         "2022-03-16T14:10:11+00:00"
+      ]
+    },
+    "sluttdato": {
+      "description": "Dato for når milepelen slutter på ISO 8601-format",
+      "type": "string",
+      "format": "date-time",
+      "examples": [
+        "2022-03-18T14:10:11+00:00"
       ]
     },
     "beskrivelse": {
