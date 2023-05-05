@@ -10,8 +10,7 @@
   "additionalProperties": false,
   "required": [
     "navn",
-    "startdato",
-    "sluttdato"
+    "startdato"
   ],
   "properties": {
     "navn": {
@@ -28,7 +27,7 @@
     },
     "sluttdato": {
       "description": "Dato for når milepelen slutter på ISO 8601-format",
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "examples": [
         "2022-03-18T14:10:11+00:00"
