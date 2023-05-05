@@ -10,7 +10,8 @@
   "additionalProperties": false,
   "required": [
     "navn",
-    "dato"
+    "startdato",
+    "sluttdato"
   ],
   "properties": {
     "navn": {
