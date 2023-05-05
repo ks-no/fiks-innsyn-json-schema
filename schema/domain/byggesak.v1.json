@@ -88,7 +88,6 @@
         "versjon",
         "systemId",
         "erstatterTidligereSystemId",
-        "size",
         "mimeType"
       ],
       "properties": {
@@ -125,7 +124,8 @@
           "type": "string"
         },
         "size": {
-          "type": "integer"
+          "$ref": "../types/int.nullable.json",
+          "description": "Størrelse på fil i bytes"
         },
         "mimeType": {
           "type": "string"
