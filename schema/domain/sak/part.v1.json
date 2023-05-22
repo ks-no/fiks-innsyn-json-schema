@@ -43,7 +43,7 @@
     },
     "adresse": {
       "description": "Adresse for en part",
-      "$ref": "../adresse.v1.json"
+      "$ref": "sakadresse.v1.json"
     },
     "epost": {
       "description": "Epost for en part",
