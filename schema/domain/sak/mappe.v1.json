@@ -108,8 +108,8 @@
         "$ref": "edialog.skjema.v1.json"
       }
     },
-    "matrikkler": {
-      "description": "Matrikkler til eiendommer som saken omhandler",
+    "matrikler": {
+      "description": "Matrikler til eiendommer som saken omhandler",
       "type": [
         "array",
         "null"
