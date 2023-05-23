@@ -1,7 +1,7 @@
 {
   "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/sakadresse.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Adresse V1",
+  "title": "SakAdresse V1",
   "description": "En adresse",
   "type": [
     "object",

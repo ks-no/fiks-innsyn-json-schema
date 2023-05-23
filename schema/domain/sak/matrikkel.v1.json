@@ -1,45 +1,37 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/eiendom.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/matrikkel.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Eiendom V1",
-  "description": "Informasjon om eiendommer",
+  "title": "Matrikkel V1",
+  "description": "Informasjon om matrikkel",
   "type": [
     "object",
     "null"
   ],
   "additionalProperties": false,
-  "required": [
-    "kommunenummer",
-    "gardsnummer",
-    "bruksnummer",
-    "festenummer",
-    "seksjonsnummer",
-    "matrikkelId"
-  ],
   "properties": {
     "kommunenummer": {
       "description": "Kommunenummer til eiendommen",
-      "$ref": "../../types/string.not.blank.json",
+      "$ref": "../../types/string.nullable.not.blank.json",
       "pattern": "^\\d{4}$"
     },
     "gardsnummer": {
       "description": "Gardsnummer til eiendommen",
-      "$ref": "../../types/string.not.blank.json",
+      "$ref": "../../types/string.nullable.not.blank.json",
       "pattern": "^[0-9]{1,6}$"
     },
     "bruksnummer": {
       "description": "Bruksnummer til eiendommen",
-      "$ref": "../../types/string.not.blank.json",
+      "$ref": "../../types/string.nullable.not.blank.json",
       "pattern": "^[0-9]{1,6}$"
     },
     "festenummer": {
       "description": "Festenummer til eiendommen",
-      "$ref": "../../types/string.not.blank.json",
+      "$ref": "../../types/string.nullable.not.blank.json",
       "pattern": "^[0-9]{1,6}$"
     },
     "seksjonsnummer": {
       "description": "Seksjonsnummer til eiendommen",
-      "$ref": "../../types/string.not.blank.json",
+      "$ref": "../../types/string.nullable.not.blank.json",
       "pattern": "^[0-9]{1,6}$"
     },
     "matrikkelId": {
