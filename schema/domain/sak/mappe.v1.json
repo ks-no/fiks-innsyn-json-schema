@@ -107,6 +107,26 @@
       "items": {
         "$ref": "edialog.skjema.v1.json"
       }
+    },
+    "matrikler": {
+      "description": "Matrikler til eiendommer som saken omhandler",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "matrikkel.v1.json"
+      }
+    },
+    "adresser": {
+      "description": "Adresser saken omhandler",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "sakadresse.v1.json"
+      }
     }
   }
 }

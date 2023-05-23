@@ -1,0 +1,56 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/matrikkel.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Matrikkel V1",
+  "description": "Informasjon om matrikkel",
+  "type": [
+    "object"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "kommunenummer": {
+      "description": "Kommunenummer til eiendommen",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}$"
+    },
+    "gardsnummer": {
+      "description": "Gardsnummer til eiendommen",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,6}$"
+    },
+    "bruksnummer": {
+      "description": "Bruksnummer til eiendommen",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,6}$"
+    },
+    "festenummer": {
+      "description": "Festenummer til eiendommen",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,6}$"
+    },
+    "seksjonsnummer": {
+      "description": "Seksjonsnummer til eiendommen",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,6}$"
+    },
+    "matrikkelId": {
+      "description": "Unik Id til eiendommen",
+      "$ref": "../../types/int64.json"
+    }
+  }
+}
