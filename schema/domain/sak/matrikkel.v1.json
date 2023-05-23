@@ -4,35 +4,49 @@
   "title": "Matrikkel V1",
   "description": "Informasjon om matrikkel",
   "type": [
-    "object",
-    "null"
+    "object"
   ],
   "additionalProperties": false,
   "properties": {
     "kommunenummer": {
       "description": "Kommunenummer til eiendommen",
-      "$ref": "../../types/string.nullable.not.blank.json",
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^\\d{4}$"
     },
     "gardsnummer": {
       "description": "Gardsnummer til eiendommen",
-      "$ref": "../../types/string.nullable.not.blank.json",
-      "pattern": "^[0-9]{1,6}$"
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,4}$"
     },
     "bruksnummer": {
       "description": "Bruksnummer til eiendommen",
-      "$ref": "../../types/string.nullable.not.blank.json",
-      "pattern": "^[0-9]{1,6}$"
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,4}$"
     },
     "festenummer": {
       "description": "Festenummer til eiendommen",
-      "$ref": "../../types/string.nullable.not.blank.json",
-      "pattern": "^[0-9]{1,6}$"
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,4}$"
     },
     "seksjonsnummer": {
       "description": "Seksjonsnummer til eiendommen",
-      "$ref": "../../types/string.nullable.not.blank.json",
-      "pattern": "^[0-9]{1,6}$"
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{1,4}$"
     },
     "matrikkelId": {
       "description": "Unik Id til eiendommen",
