@@ -22,7 +22,7 @@
         "string",
         "null"
       ],
-      "pattern": "^[0-9]{1,4}$"
+      "pattern": "^[0-9]{1,6}$"
     },
     "bruksnummer": {
       "description": "Bruksnummer til eiendommen",
@@ -30,7 +30,7 @@
         "string",
         "null"
       ],
-      "pattern": "^[0-9]{1,4}$"
+      "pattern": "^[0-9]{1,6}$"
     },
     "festenummer": {
       "description": "Festenummer til eiendommen",
@@ -38,7 +38,7 @@
         "string",
         "null"
       ],
-      "pattern": "^[0-9]{1,4}$"
+      "pattern": "^[0-9]{1,6}$"
     },
     "seksjonsnummer": {
       "description": "Seksjonsnummer til eiendommen",
@@ -46,7 +46,7 @@
         "string",
         "null"
       ],
-      "pattern": "^[0-9]{1,4}$"
+      "pattern": "^[0-9]{1,6}$"
     },
     "matrikkelId": {
       "description": "Unik Id til eiendommen",
