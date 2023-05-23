@@ -26,7 +26,11 @@
       "description": "Poststed"
     },
     "postnummer": {
-      "$ref": "../../types/string.nullable.not.blank.json",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}$",
       "description": "Postnummer"
     },
     "land": {
