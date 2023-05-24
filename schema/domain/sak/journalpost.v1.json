@@ -108,9 +108,15 @@
         "2022-03-16T14:10:11+00:00"
       ]
     },
-    "korrespondansepart": {
-      "description": "Virksomhet eller person som arkivskaper mottar eller sender arkivdokumenter til",
-      "$ref": "korrespondansepart.v1.json"
+    "korrespondanseparter": {
+      "description": "Liste med virksomheter eller personer som arkivskaper mottar eller sender arkivdokumenter til",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "korrespondansepart.v1.json"
+      }
     },
     "dokumenter": {
       "description": "Liste med dokumenter tilknyttet journalposten",
