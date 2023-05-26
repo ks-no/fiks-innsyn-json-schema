@@ -11,7 +11,7 @@
 
   <groupId>no.ks.fiks</groupId>
   <artifactId>innsyn-json-schema</artifactId>
-  <version>1.3.6</version>
+  <version>1.3.7-SNAPSHOT</version>
   <name>innsyn-json-schema</name>
   <description>JSON schema-modeller for indeksering mot Fiks Innsyn</description>
   <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
