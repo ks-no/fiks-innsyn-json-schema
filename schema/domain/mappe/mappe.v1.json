@@ -86,7 +86,7 @@
       ]
     },
     "saksansvarlig": {
-      "description": "Navn på person som er mappeansvarlig",
+      "description": "Navn på person som er saksansvarlig",
       "$ref": "../../types/string.nullable.json"
     },
     "lenker": {
