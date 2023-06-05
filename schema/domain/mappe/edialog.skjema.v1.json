@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/edialog.skjema.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/edialog.skjema.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "eDialog-skjema V1",
   "description": "Informasjon for eDialog-skjema som brukes til innsending via eDialog",

@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/aktivitet.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/aktivitet.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Aktivitet V1",
   "description": "Aktivitet utført på en melding",

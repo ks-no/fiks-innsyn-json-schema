@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/milepel.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/milepel.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Milepel V1",
   "description": "Milepel i en mappe",
