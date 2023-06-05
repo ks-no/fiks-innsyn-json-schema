@@ -37,7 +37,7 @@
       "$ref": "../../types/string.nullable.json"
     },
     "journalpostnummer": {
-      "description": "Viser rekkefølgen på journalpostene innenfor saksmappen",
+      "description": "Viser rekkefølgen på journalpostene innenfor mappen",
       "$ref": "../../types/int.nullable.json"
     },
     "journalaar": {

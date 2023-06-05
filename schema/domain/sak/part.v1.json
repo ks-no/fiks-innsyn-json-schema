@@ -1,8 +1,8 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/part.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/part.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Part V1",
-  "description": "Part i en sak",
+  "description": "Part i en mappe",
   "type": [
     "object",
     "null"
@@ -43,7 +43,7 @@
     },
     "adresse": {
       "description": "Adresse for en part",
-      "$ref": "sakadresse.v1.json"
+      "$ref": "mappeadresse.v1.json"
     },
     "epost": {
       "description": "Epost for en part",

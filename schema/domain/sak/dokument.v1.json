@@ -1,8 +1,8 @@
 {
   "id": "https://api.fiks.ks.no/innsyn/schema/domain/sak/dokument.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Saksdokument V1",
-  "description": "Dokument tilknyttet en sak",
+  "title": "Mappedokument V1",
+  "description": "Dokument tilknyttet en mappe",
   "type": [
     "object",
     "null"

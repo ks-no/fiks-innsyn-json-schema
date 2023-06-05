@@ -34,7 +34,7 @@
       "$ref": "../../types/string.nullable.json"
     },
     "parter": {
-      "description": "Liste med sakens parter",
+      "description": "Liste med mappens parter",
       "type": [
         "array",
         "null"
@@ -56,7 +56,7 @@
       ]
     },
     "avsluttet": {
-      "description": "Tidspunkt for når saken ble avsluttet på ISO 8601-format",
+      "description": "Tidspunkt for når mappen ble avsluttet på ISO 8601-format",
       "type": ["string", "null"],
       "format": "date-time",
       "examples": [
@@ -64,7 +64,7 @@
       ]
     },
     "milepeler": {
-      "description": "Liste med sakens milepeler",
+      "description": "Liste med mappens milepeler",
       "type": [
         "array",
         "null"
@@ -74,11 +74,11 @@
       }
     },
     "navaerendeMilepel": {
-      "description": "Nåværende milepel for saken",
+      "description": "Nåværende milepel for mappen",
       "$ref": "milepel.v1.json"
     },
     "saksdato": {
-      "description": "Tidspunkt for når saken ble opprettet på ISO 8601-format",
+      "description": "Tidspunkt for når mappen ble opprettet på ISO 8601-format",
       "type": ["string", "null"],
       "format": "date-time",
       "examples": [
@@ -86,7 +86,7 @@
       ]
     },
     "saksansvarlig": {
-      "description": "Navn på person som er saksansvarlig",
+      "description": "Navn på person som er mappeansvarlig",
       "$ref": "../../types/string.nullable.json"
     },
     "lenker": {
@@ -110,7 +110,7 @@
       }
     },
     "matrikler": {
-      "description": "Matrikler til eiendommer som saken omhandler",
+      "description": "Matrikler til eiendommer som mappen omhandler",
       "type": [
         "array",
         "null"
@@ -120,13 +120,13 @@
       }
     },
     "adresser": {
-      "description": "Adresser saken omhandler",
+      "description": "Adresser mappen omhandler",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "$ref": "sakadresse.v1.json"
+        "$ref": "mappeadresse.v1.json"
       }
     }
   }
