@@ -1,0 +1,10 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/mappetype.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Mappetype",
+  "javaType": "no.ks.fiks.innsyn.schema.ekstern.domain.mappe.MappetypeV1",
+  "enum": [
+    "BARNEVERNSSAK",
+    "BYGGESAK"
+  ]
+}

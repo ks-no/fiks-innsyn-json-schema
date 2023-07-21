@@ -7,7 +7,9 @@
   "additionalProperties": false,
   "required": [
     "journalposttype",
-    "tittel"
+    "tittel",
+    "forelder",
+    "forelderType"
   ],
   "properties": {
     "journalposttype": {
@@ -23,6 +25,13 @@
     "tittel": {
       "description": "Tittel eller navn på arkivenheten",
       "$ref": "../../types/string.not.blank.json"
+    },
+    "forelder": {
+      "$ref": "../forelder.json"
+    },
+    "forelderType": {
+      "description": "Samme verdi som type-feltet på mappen med id refert til av forelder",
+      "$ref": "mappetype.v1.json"
     },
     "mappeId": {
       "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører",
@@ -130,9 +139,6 @@
     },
     "korrelasjonId": {
       "$ref": "../korrelasjon.id.json"
-    },
-    "forelder": {
-      "$ref": "../forelder.json"
     }
   }
 }

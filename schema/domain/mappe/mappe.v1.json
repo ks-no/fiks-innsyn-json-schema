@@ -12,10 +12,7 @@
   "properties": {
     "type": {
       "description": "Mappens type",
-      "enum": [
-        "BARNEVERNSSAK",
-        "BYGGESAK"
-      ]
+      "$ref": "mappetype.v1.json"
     },
     "tittel": {
       "description": "Tittel eller navn på arkivenheten",
