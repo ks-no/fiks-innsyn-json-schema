@@ -1,13 +1,14 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/journalpost.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/journalpost.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Innsyn Journalpost V1",
+  "title": "Barnevern Journalpost V1",
   "description": "Melding som beskriver en journalpost",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "journalposttype",
-    "tittel"
+    "tittel",
+    "forelderMeldingId"
   ],
   "properties": {
     "journalposttype": {
@@ -23,6 +24,11 @@
     "tittel": {
       "description": "Tittel eller navn på arkivenheten",
       "$ref": "../../types/string.not.blank.json"
+    },
+    "forelderMeldingId": {
+      "description": "meldingId for forelder indeksert med samme integrasjon og under samme Fiks-organisasjon",
+      "$ref": "../../types/string.not.blank.json",
+      "format": "uuid"
     },
     "mappeId": {
       "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører",
@@ -108,11 +114,13 @@
         "$ref": "dokument.v1.json"
       }
     },
-    "korrelasjonId": {
-      "$ref": "../korrelasjon.id.json"
-    },
-    "forelder": {
-      "$ref": "../forelder.json"
+    "dokumenttype": {
+      "description": "Dokumenttype for journalposten",
+      "enum": [
+        "VEDTAK",
+        "MOTEREFERAT",
+        "TILTAKSPLAN"
+      ]
     }
   }
 }

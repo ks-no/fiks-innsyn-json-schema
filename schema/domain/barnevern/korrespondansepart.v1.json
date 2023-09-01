@@ -1,7 +1,7 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/korrespondansepart.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/korrespondansepart.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Korrespondansepart V1",
+  "title": "Barnevern Korrespondansepart V1",
   "description": "Korrespondansepart i en mappe",
   "type": [
     "object",
@@ -35,18 +35,6 @@
         "IM",
         "IK"
       ]
-    },
-    "adresse": {
-      "description": "Adresse for korrespondansepart",
-      "$ref": "../adresse.v1.json"
-    },
-    "epost": {
-      "description": "Epost for korrespondansepart",
-      "$ref": "../../types/string.nullable.not.blank.json"
-    },
-    "telefonnummer": {
-      "description": "Telefonnummer for korrespondansepart",
-      "$ref": "../../types/string.nullable.not.blank.json"
     },
     "orgnr": {
       "description": "Organisasjonsnummer for korrespondansepart dersom det er en organisasjon",
