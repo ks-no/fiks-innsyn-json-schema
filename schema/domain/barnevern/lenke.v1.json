@@ -1,0 +1,25 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/lenke.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Barnevern Lenke V1",
+  "description": "Lenke",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "navn",
+    "url"
+  ],
+  "properties": {
+    "navn": {
+      "description": "Navn på lenke",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "url": {
+      "description": "URL for lenke",
+      "$ref": "../../types/string.not.blank.json"
+    }
+  }
+}

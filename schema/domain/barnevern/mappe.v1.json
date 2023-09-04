@@ -1,21 +1,14 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/mappe.v1.json",
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/mappe.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "Innsyn Mappe V1",
+  "title": "Barnevern Mappe V1",
   "description": "Melding som beskriver en mappe",
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "type",
     "tittel"
   ],
   "properties": {
-    "type": {
-      "description": "Mappens type",
-      "enum": [
-        "BYGGESAK"
-      ]
-    },
     "tittel": {
       "description": "Tittel eller navn på arkivenheten",
       "$ref": "../../types/string.not.blank.json"
@@ -96,26 +89,6 @@
       ],
       "items": {
         "$ref": "lenke.v1.json"
-      }
-    },
-    "matrikler": {
-      "description": "Matrikler til eiendommer som mappen omhandler",
-      "type": [
-        "array",
-        "null"
-      ],
-      "items": {
-        "$ref": "matrikkel.v1.json"
-      }
-    },
-    "adresser": {
-      "description": "Adresser mappen omhandler",
-      "type": [
-        "array",
-        "null"
-      ],
-      "items": {
-        "$ref": "mappeadresse.v1.json"
       }
     }
   }

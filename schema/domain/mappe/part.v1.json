@@ -10,9 +10,8 @@
   "additionalProperties": false,
   "required": [
     "type",
-    "partRolle",
-    "partNavn",
-    "partId"
+    "rolle",
+    "navn"
   ],
   "properties": {
     "type": {
@@ -22,7 +21,7 @@
         "PERSON"
       ]
     },
-    "partRolle": {
+    "rolle": {
       "description": "Angivelse av rollen til parten",
       "$ref": "../../types/string.not.blank.json",
       "examples": [
@@ -33,12 +32,8 @@
         "Barn"
       ]
     },
-    "partNavn": {
+    "navn": {
       "description": "Navn på virksomhet eller person som er part",
-      "$ref": "../../types/string.not.blank.json"
-    },
-    "partId": {
-      "description": "Unik ID for en part",
       "$ref": "../../types/string.not.blank.json"
     },
     "adresse": {

@@ -1,0 +1,37 @@
+{
+  "id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/part.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Barnevern Part V1",
+  "description": "Part i en mappe",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "rolle",
+    "navn"
+  ],
+  "properties": {
+    "type": {
+      "description": "Partens type",
+      "enum": [
+        "ORGANISASJON",
+        "PERSON"
+      ]
+    },
+    "rolle": {
+      "description": "Angivelse av rollen til parten",
+      "enum": [
+        "HOVEDPERSON",
+        "MOR",
+        "FAR"
+      ]
+    },
+    "navn": {
+      "description": "Navn på virksomhet eller person som er part",
+      "$ref": "../../types/string.not.blank.json"
+    }
+  }
+}
