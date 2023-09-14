@@ -26,7 +26,10 @@
       "enum": [
         "HOVEDPERSON",
         "MOR",
-        "FAR"
+        "FAR",
+        "MEDMOR",
+        "MEDFAR",
+        "VERGE"
       ]
     },
     "navn": {
