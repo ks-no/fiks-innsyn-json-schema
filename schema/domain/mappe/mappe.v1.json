@@ -11,9 +11,10 @@
   ],
   "properties": {
     "type": {
-      "description": "Mappens type",
+      "description": "Mappens type. Den generelle typen SAK kan benyttes for det som ikke dekkes av noen av de andre typene.",
       "enum": [
-        "BYGGESAK"
+        "BYGGESAK",
+        "SAK"
       ]
     },
     "tittel": {
