@@ -17,7 +17,8 @@
       "description": "Korrespondansepartens type",
       "enum": [
         "ORGANISASJON",
-        "PERSON"
+        "PERSON",
+        null
       ]
     },
     "navn": {
