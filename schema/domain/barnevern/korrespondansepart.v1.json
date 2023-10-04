@@ -9,7 +9,6 @@
   ],
   "additionalProperties": false,
   "required": [
-    "type",
     "navn",
     "korrespondanseparttype"
   ],
