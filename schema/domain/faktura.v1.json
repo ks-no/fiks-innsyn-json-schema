@@ -73,7 +73,7 @@
           "$ref": "../types/string.not.blank.json"
         },
         "fakturaDato": {
-          "type": "string",
+          "type": ["string", "null"],
           "format": "date",
           "description": "Fakturadato på ISO 8601-format, YYYY-MM-DD",
           "examples": [

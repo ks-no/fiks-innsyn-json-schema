@@ -10,7 +10,6 @@
   "additionalProperties": false,
   "required": [
     "filnavn",
-    "storrelse",
     "mimeType",
     "tittel"
   ],
@@ -21,7 +20,7 @@
     },
     "storrelse": {
       "description": "Dokumentets storrelse i bytes",
-      "$ref": "../../types/int64.json"
+      "$ref": "../../types/int64.nullable.json"
     },
     "mimeType": {
       "description": "Dokumentes MIME type",

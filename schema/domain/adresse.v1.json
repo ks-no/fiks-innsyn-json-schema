@@ -10,7 +10,7 @@
   "additionalProperties": false,
   "properties": {
     "navn": {
-      "$ref": "../types/string.not.blank.json",
+      "$ref": "../types/string.nullable.not.blank.json",
       "description": "Navn"
     },
     "adresselinje1": {
