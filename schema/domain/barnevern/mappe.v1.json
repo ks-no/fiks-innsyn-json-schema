@@ -25,8 +25,8 @@
       "description": "Tekstlig beskrivelse av arkivenheten",
       "$ref": "../../types/string.nullable.json"
     },
-    "parter": {
-      "description": "Liste med mappens parter",
+    "andreParter": {
+      "description": "Liste med mappens andre parter. Skal ikke inneholde parten definert i minPart.",
       "type": [
         "array",
         "null"
