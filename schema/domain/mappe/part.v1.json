@@ -32,6 +32,10 @@
         "Barn"
       ]
     },
+    "id": {
+      "description": "Navn på virksomhet eller person som er part",
+      "$ref": "../../types/string.nullable.json"
+    },
     "navn": {
       "description": "Navn på virksomhet eller person som er part",
       "$ref": "../../types/string.not.blank.json"

@@ -21,6 +21,10 @@
         null
       ]
     },
+    "id": {
+      "description": "Navn på virksomhet eller person som er korrespondansepart",
+      "$ref": "../../types/string.nullable.json"
+    },
     "navn": {
       "description": "Navn på virksomhet eller person som er korrespondansepart",
       "$ref": "../../types/string.not.blank.json"
