@@ -52,10 +52,6 @@
       "description": "Telefonnummer for en part",
       "$ref": "../../types/string.nullable.not.blank.json"
     },
-    "orgnr": {
-      "description": "Organisasjonsnummer for part dersom det er en organisasjon",
-      "$ref": "../../types/string.nullable.not.blank.json"
-    },
     "kontaktperson": {
       "description": "Kontaktperson hos part dersom det er en organisasjon",
       "$ref": "../../types/string.nullable.not.blank.json"
