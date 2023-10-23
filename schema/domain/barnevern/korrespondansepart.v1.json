@@ -22,7 +22,7 @@
       ]
     },
     "id": {
-      "description": "Navn på virksomhet eller person som er korrespondansepart",
+      "description": "Organisasjonsnummer eller fødselsnummer for part",
       "$ref": "../../types/string.nullable.json"
     },
     "navn": {
@@ -39,10 +39,6 @@
         "IM",
         "IK"
       ]
-    },
-    "orgnr": {
-      "description": "Organisasjonsnummer for korrespondansepart dersom det er en organisasjon",
-      "$ref": "../../types/string.nullable.not.blank.json"
     },
     "kontaktperson": {
       "description": "Kontaktperson hos korrespondansepart dersom det er en organisasjon",
