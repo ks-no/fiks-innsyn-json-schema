@@ -33,7 +33,7 @@
       ]
     },
     "id": {
-      "description": "Navn på virksomhet eller person som er part",
+      "description": "Organisasjonsnummer eller fødselsnummer for part",
       "$ref": "../../types/string.nullable.json"
     },
     "navn": {
