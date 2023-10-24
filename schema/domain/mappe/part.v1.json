@@ -32,6 +32,10 @@
         "Barn"
       ]
     },
+    "id": {
+      "description": "Organisasjonsnummer eller fødselsnummer for part",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
     "navn": {
       "description": "Navn på virksomhet eller person som er part",
       "$ref": "../../types/string.not.blank.json"
@@ -46,10 +50,6 @@
     },
     "telefonnummer": {
       "description": "Telefonnummer for en part",
-      "$ref": "../../types/string.nullable.not.blank.json"
-    },
-    "orgnr": {
-      "description": "Organisasjonsnummer for part dersom det er en organisasjon",
       "$ref": "../../types/string.nullable.not.blank.json"
     },
     "kontaktperson": {

@@ -21,6 +21,10 @@
         null
       ]
     },
+    "id": {
+      "description": "Organisasjonsnummer eller fødselsnummer for part",
+      "$ref": "../../types/string.nullable.not.blank.json"
+    },
     "navn": {
       "description": "Navn på virksomhet eller person som er korrespondansepart",
       "$ref": "../../types/string.not.blank.json"
@@ -46,10 +50,6 @@
     },
     "telefonnummer": {
       "description": "Telefonnummer for korrespondansepart",
-      "$ref": "../../types/string.nullable.not.blank.json"
-    },
-    "orgnr": {
-      "description": "Organisasjonsnummer for korrespondansepart dersom det er en organisasjon",
       "$ref": "../../types/string.nullable.not.blank.json"
     },
     "kontaktperson": {
