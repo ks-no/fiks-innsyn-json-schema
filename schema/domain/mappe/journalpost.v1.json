@@ -108,6 +108,17 @@
         "$ref": "dokument.v1.json"
       }
     },
+    "kanBeOmInnsyn": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Markerer at bruker kan be om innsyn i denne journalposten. Krever at felter som fagsystemet trenger for å håndtere forespørselen er satt.",
+      "examples": [
+        true,
+        false
+      ]
+    },
     "korrelasjonId": {
       "$ref": "../korrelasjon.id.json"
     },
