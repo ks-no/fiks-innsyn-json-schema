@@ -6,21 +6,10 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "journalposttype",
     "tittel",
     "forelderMeldingId"
   ],
   "properties": {
-    "journalposttype": {
-      "description": "Noark journalposttype. Mulige verdier: I - inngående dokument, U - utgående dokument, N - organinternt dokument for oppfølging, X - organinternt dokument uten oppfølging, S - saksframlegg",
-      "enum": [
-        "I",
-        "U",
-        "N",
-        "X",
-        "S"
-      ]
-    },
     "tittel": {
       "description": "Tittel eller navn på arkivenheten",
       "$ref": "../../types/string.not.blank.json"
@@ -29,6 +18,17 @@
       "description": "meldingId for forelder indeksert med samme integrasjon og under samme Fiks-organisasjon",
       "$ref": "../../types/string.not.blank.json",
       "format": "uuid"
+    },
+    "journalposttype": {
+      "description": "Noark journalposttype. Mulige verdier: I - inngående dokument, U - utgående dokument, N - organinternt dokument for oppfølging, X - organinternt dokument uten oppfølging, S - saksframlegg",
+      "enum": [
+        "I",
+        "U",
+        "N",
+        "X",
+        "S",
+        null
+      ]
     },
     "mappeId": {
       "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører",
@@ -120,17 +120,6 @@
         "VEDTAK",
         "MOTEREFERAT",
         "TILTAKSPLAN"
-      ]
-    },
-    "kanBeOmInnsyn": {
-      "type": [
-        "boolean",
-        "null"
-      ],
-      "description": "Markerer at bruker kan be om innsyn i denne journalposten. Krever at felter som fagsystemet trenger for å håndtere forespørselen er satt. Innsynsforespørsler sendes til fagsystem via Fiks protokoll med navn no.ks.fiks.innsynsforespoersel.",
-      "examples": [
-        true,
-        false
       ]
     }
   }
