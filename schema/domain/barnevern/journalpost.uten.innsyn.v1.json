@@ -40,6 +40,16 @@
       "examples": [
         "2022-03-16T14:10:11+00:00"
       ]
+    },
+    "korrespondanseparter": {
+      "description": "Liste med virksomheter eller personer som arkivskaper mottar eller sender arkivdokumenter til",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "korrespondansepart.v1.json"
+      }
     }
   }
 }
