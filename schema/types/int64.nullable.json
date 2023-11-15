@@ -4,7 +4,6 @@
   "title": "Int64 Nullable",
   "description": "64-bits integer som også kan være null",
   "type": [
-    "string",
     "integer",
     "null"
   ],

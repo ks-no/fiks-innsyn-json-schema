@@ -3,10 +3,7 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Int64",
   "description": "64-bits integer",
-  "type": [
-    "string",
-    "integer"
-  ],
+  "type": "integer",
   "format": "int64",
   "minimum": -9223372036854775808,
   "maximum": 9223372036854775807
