@@ -1,0 +1,12 @@
+{
+  "$id": "https://api.fiks.ks.no/innsyn/schema/types/int32.nullable.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Int32 Nullable",
+  "description": "32-bits integer som også kan være null",
+  "type": [
+    "integer",
+    "null"
+  ],
+  "minimum": -2147483648,
+  "maximum": 2147483647
+}

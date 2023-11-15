@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/forelder.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/forelder.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Innsyn Forelder",
   "description": "Definerer en annen indeksert melding som forelder til denne meldingen",

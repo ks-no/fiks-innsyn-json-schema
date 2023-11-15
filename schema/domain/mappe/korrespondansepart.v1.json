@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/korrespondansepart.v1.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/korrespondansepart.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Korrespondansepart V1",
   "description": "Korrespondansepart i en mappe",

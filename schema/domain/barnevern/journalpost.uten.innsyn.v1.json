@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/journalpost.uten.innsyn.v1.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/journalpost.uten.innsyn.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Barnevern Journalpost Uten Innsyn V1",
   "description": "Melding som beskriver en journalpost som det skal være mulig å be om innsyn i",
