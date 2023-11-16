@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/innsendt.skjema.v1.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/innsendt.skjema.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Innsyn Innsendt Skjema V1",
   "description": "Melding som beskriver et innsendt skjema",

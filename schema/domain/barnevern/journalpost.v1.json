@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/journalpost.v1.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/journalpost.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Barnevern Journalpost V1",
   "description": "Melding som beskriver en journalpost",
@@ -44,11 +44,11 @@
     },
     "journalpostnummer": {
       "description": "Viser rekkefølgen på journalpostene innenfor mappen",
-      "$ref": "../../types/int.nullable.json"
+      "$ref": "../../types/int32.nullable.json"
     },
     "journalaar": {
       "description": "Viser året journalposten ble opprettet",
-      "$ref": "../../types/int.nullable.json"
+      "$ref": "../../types/int32.nullable.json"
     },
     "journaldato": {
       "description": "Journaldato på ISO 8601-format",

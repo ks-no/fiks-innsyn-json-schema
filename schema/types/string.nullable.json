@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/types/string.nullable.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/types/string.nullable.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "String Nullable",
   "description": "Streng som også kan være null",

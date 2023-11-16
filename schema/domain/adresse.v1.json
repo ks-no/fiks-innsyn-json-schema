@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/adresse.v1.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/adresse.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Adresse V1",
   "description": "En postadresse",

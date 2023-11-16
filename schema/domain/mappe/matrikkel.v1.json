@@ -1,5 +1,5 @@
 {
-  "id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/matrikkel.v1.json",
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/matrikkel.v1.json",
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Matrikkel V1",
   "description": "Informasjon om matrikkel",
