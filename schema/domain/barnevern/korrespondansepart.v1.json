@@ -9,25 +9,79 @@
   ],
   "additionalProperties": false,
   "required": [
-    "navn",
     "korrespondanseparttype"
   ],
+  "oneOf": [
+    {
+      "properties": { "person": { "type": "object" } },
+      "required": [ "person" ]
+    },
+    {
+      "properties": { "organisasjon": { "type": "object" } } ,
+      "required": [ "organisasjon" ]
+    }
+  ],
+  "definitions": {
+    "PersonPartV1": {
+      "description": "En part som identifiserer en person",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "fornavn",
+        "etternavn"
+      ],
+      "properties": {
+        "fodselsnummer": {
+          "description": "Fødselsnummer",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "fornavn": {
+          "description": "Fornavn",
+          "$ref": "../../types/string.not.blank.json"
+        },
+        "etternavn": {
+          "description": "Etternavn",
+          "$ref": "../../types/string.not.blank.json"
+        }
+      }
+    },
+    "OrganisasjonPartV1": {
+      "description": "En part som identifiserer en organisasjon",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "navn"
+      ],
+      "properties": {
+        "organisasjonsnummer": {
+          "description": "Organisasjonsnummer",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "navn": {
+          "description": "Navn på virksomhet",
+          "$ref": "../../types/string.not.blank.json"
+        },
+        "kontaktperson": {
+          "description": "Kontaktperson hos korrespondansepart dersom det er en organisasjon",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        }
+      }
+    }
+  },
   "properties": {
-    "type": {
-      "description": "Korrespondansepartens type",
-      "enum": [
-        "ORGANISASJON",
-        "PERSON",
-        null
-      ]
+    "person": {
+      "description": "Part som er en person",
+      "$ref": "#/definitions/PersonPartV1"
     },
-    "id": {
-      "description": "Organisasjonsnummer eller fødselsnummer for part",
-      "$ref": "../../types/string.nullable.not.blank.json"
-    },
-    "navn": {
-      "description": "Navn på virksomhet eller person som er korrespondansepart",
-      "$ref": "../../types/string.not.blank.json"
+    "organisasjon": {
+      "description": "Part som er en organisasjon",
+      "$ref": "#/definitions/OrganisasjonPartV1"
     },
     "korrespondanseparttype": {
       "description": "Noark korrespondanseparttype. Mulige verdier: EA - avsender, EM - mottaker, EK - kopimottaker, IA - intern avsender, IM - intern mottaker, IK, intern kopimottaker",
@@ -39,10 +93,6 @@
         "IM",
         "IK"
       ]
-    },
-    "kontaktperson": {
-      "description": "Kontaktperson hos korrespondansepart dersom det er en organisasjon",
-      "$ref": "../../types/string.nullable.not.blank.json"
     }
   }
 }
