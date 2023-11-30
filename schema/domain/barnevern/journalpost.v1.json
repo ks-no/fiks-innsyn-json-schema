@@ -10,8 +10,8 @@
     "forelderMeldingId"
   ],
   "if": {
-    "properties": { "kanBeOmInnsyn": { "const": true } },
-    "required": [ "kanBeOmInnsyn" ]
+    "properties": { "innsynsforesporselStatus": { "const": "IKKE_FORESPURT" } },
+    "required": [ "innsynsforesporselStatus" ]
   },
   "then": {
     "required": [ "mappeId", "systemId" ],
@@ -137,15 +137,13 @@
         "TILTAKSPLAN"
       ]
     },
-    "kanBeOmInnsyn": {
-      "type": [
-        "boolean",
-        "null"
-      ],
-      "description": "Indikerer om det er mulig å be om innsyn i denne journalposten",
-      "examples": [
-        true,
-        false
+    "innsynsforesporselStatus": {
+      "enum": [
+        "IKKE_FORESPURT",
+        "FORESPURT",
+        "GODKJENT",
+        "AVVIST",
+        null
       ]
     }
   }
