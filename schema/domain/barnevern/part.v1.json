@@ -27,7 +27,8 @@
     },
     "fodselsnummer": {
       "description": "Fødselsnummer",
-      "$ref": "../../types/string.nullable.not.blank.json"
+      "$ref": "../../types/string.nullable.json",
+      "pattern": "^[0-9]{11}$"
     },
     "fornavn": {
       "description": "Fornavn",
