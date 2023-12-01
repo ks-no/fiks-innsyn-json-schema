@@ -9,18 +9,11 @@
   ],
   "additionalProperties": false,
   "required": [
-    "type",
     "rolle",
-    "navn"
+    "fornavn",
+    "etternavn"
   ],
   "properties": {
-    "type": {
-      "description": "Partens type",
-      "enum": [
-        "ORGANISASJON",
-        "PERSON"
-      ]
-    },
     "rolle": {
       "description": "Angivelse av rollen til parten",
       "enum": [
@@ -32,12 +25,17 @@
         "VERGE"
       ]
     },
-    "id": {
-      "description": "Organisasjonsnummer eller fødselsnummer for part",
-      "$ref": "../../types/string.nullable.not.blank.json"
+    "fodselsnummer": {
+      "description": "Fødselsnummer",
+      "$ref": "../../types/string.nullable.json",
+      "pattern": "^[0-9]{11}$"
     },
-    "navn": {
-      "description": "Navn på virksomhet eller person som er part",
+    "fornavn": {
+      "description": "Fornavn",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "etternavn": {
+      "description": "Etternavn",
       "$ref": "../../types/string.not.blank.json"
     }
   }
