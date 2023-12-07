@@ -20,6 +20,14 @@
     "url": {
       "description": "URL for lenke",
       "$ref": "../../types/string.not.blank.json"
+    },
+    "type": {
+      "description": "Brukes til spesialisert visning av lenken",
+      "enum": [
+        null,
+        "INFORMASJON",
+        "SKJEMA"
+      ]
     }
   }
 }
