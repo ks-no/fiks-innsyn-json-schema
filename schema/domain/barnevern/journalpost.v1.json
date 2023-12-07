@@ -24,6 +24,30 @@
       }
     }
   },
+  "definitions": {
+    "JournalpostIdV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Unik identifikator for journalpost",
+      "additionalProperties": false,
+      "required": [
+        "journalaar",
+        "journalsekvensnummer"
+      ],
+      "properties": {
+        "journalaar": {
+          "description": "Viser året journalposten ble opprettet",
+          "$ref": "../../types/int32.json"
+        },
+        "journalsekvensnummer": {
+          "description": "Viser rekkefølgen når journalposten ble opprettet under året",
+          "$ref": "../../types/int32.json"
+        }
+      }
+    }
+  },
   "properties": {
     "tittel": {
       "description": "Tittel eller navn på arkivenheten",
@@ -57,13 +81,9 @@
       "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel.",
       "$ref": "../../types/string.nullable.json"
     },
-    "journalpostnummer": {
-      "description": "Viser rekkefølgen på journalpostene innenfor mappen",
-      "$ref": "../../types/int32.nullable.json"
-    },
-    "journalaar": {
-      "description": "Viser året journalposten ble opprettet",
-      "$ref": "../../types/int32.nullable.json"
+    "journalid": {
+      "description": "Unik identifikator som innbygger kan benytte til å referere til denne journalposten",
+      "$ref": "#/definitions/JournalpostIdV1"
     },
     "journaldato": {
       "description": "Journaldato på ISO 8601-format",
