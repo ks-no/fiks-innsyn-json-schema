@@ -70,7 +70,7 @@
           "$ref": "../../types/string.not.blank.json"
         },
         "kontaktperson": {
-          "description": "Kontaktperson hos korrespondansepart dersom det er en organisasjon",
+          "description": "Kontaktperson hos en organisasjon som er avsender eller mottaker, eller part. Se feltet M412 kontaktperson i Noark 5.",
           "$ref": "../../types/string.nullable.not.blank.json"
         }
       }
@@ -86,7 +86,7 @@
       "$ref": "#/definitions/OrganisasjonPartV1"
     },
     "korrespondanseparttype": {
-      "description": "Noark korrespondanseparttype. Mulige verdier: EA - avsender, EM - mottaker, EK - kopimottaker, IA - intern avsender, IM - intern mottaker, IK, intern kopimottaker",
+      "description": "Type korrespondansepart\n. Mulige verdier: EA - avsender, EM - mottaker, EK - kopimottaker, IA - intern avsender, IM - intern mottaker, IK, intern kopimottaker. Se feltet M087 korrespondanseparttype i Noark 5.",
       "enum": [
         "EA",
         "EM",

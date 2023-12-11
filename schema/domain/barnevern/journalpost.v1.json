@@ -38,11 +38,11 @@
       ],
       "properties": {
         "journalaar": {
-          "description": "Viser året journalposten ble opprettet",
+          "description": "Viser året journalposten ble opprettet. Se feltet M013 journalaar i Noark 5.",
           "$ref": "../../types/int32.json"
         },
         "journalsekvensnummer": {
-          "description": "Viser rekkefølgen når journalposten ble opprettet under året",
+          "description": "Viser rekkefølgen når journalposten ble opprettet under året. Se feltet M014 journalsekvensnummer i Noark 5.",
           "$ref": "../../types/int32.json"
         }
       }
@@ -50,7 +50,7 @@
   },
   "properties": {
     "tittel": {
-      "description": "Tittel eller navn på arkivenheten",
+      "description": "Tittel eller navn på arkivenheten. Se feltet M020 tittel i Noark 5",
       "$ref": "../../types/string.not.blank.json"
     },
     "forelderMeldingId": {
@@ -59,7 +59,7 @@
       "format": "uuid"
     },
     "journalposttype": {
-      "description": "Noark journalposttype. Mulige verdier: I - inngående dokument, U - utgående dokument, N - organinternt dokument for oppfølging, X - organinternt dokument uten oppfølging, S - saksframlegg",
+      "description": "Navn på type journalpost. Mulige verdier: I - inngående dokument, U - utgående dokument, N - organinternt dokument for oppfølging, X - organinternt dokument uten oppfølging, S - saksframlegg. Se feltet M082 journalposttype i Noark 5.",
       "enum": [
         "I",
         "U",
@@ -70,15 +70,15 @@
       ]
     },
     "mappeId": {
-      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Påkrevd dersom kanBeOmInnsyn er true.",
+      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Påkrevd dersom kanBeOmInnsyn er true. Se feltet M003 mappeID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "systemId": {
-      "description": "Globalt unik identifikasjon av arkivenheten. Påkrevd dersom kanBeOmInnsyn er true.",
+      "description": "Globalt unik identifikasjon av arkivenheten. Påkrevd dersom kanBeOmInnsyn er true. Se feltet M001 systemID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "registreringsId": {
-      "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel.",
+      "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel. Se feltet M004 registreringsID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "journalid": {
@@ -86,7 +86,7 @@
       "$ref": "#/definitions/JournalpostIdV1"
     },
     "journaldato": {
-      "description": "Journaldato på ISO 8601-format",
+      "description": "Datoen journalposten er journalført. På ISO 8601-format. Se feltet M101 journaldato i Noark 5.",
       "type": ["string", "null"],
       "format": "date-time",
       "examples": [
@@ -108,7 +108,7 @@
       }
     },
     "beskrivelse": {
-      "description": "Tekstlig beskrivelse av arkivenheten",
+      "description": "Tekstlig beskrivelse av arkivenheten. Se feltet M021 beskrivelse i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "lenker": {
