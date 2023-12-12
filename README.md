@@ -18,12 +18,14 @@ Maven-artefakt med ferdig genererte POJO-klasser finnes på Maven Central:
 For de som ønsker å generere modellklasser selv bør det bemerkes at det er brukt et custom format for 64-bits heltall, som ser slik ut: 
 ```
 {
-  "type": [
-    "string",
-    "integer"
-  ],
-  "format": "int64"
+  "$id": "https://api.fiks.ks.no/innsyn/schema/types/int64.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Int64",
+  "description": "64-bits integer",
+  "type": "integer",
+  "format": "int64",
+  "minimum": -9223372036854775808,
+  "maximum": 9223372036854775807
 }
 ```
 int64-formatet er ikke definert i JSON Schema speccen, så dette må eventuelt konfigureres i verktøyet som brukes for generering.
-Felter av denne typen kan også sendes inn som strenger.
