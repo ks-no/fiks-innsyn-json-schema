@@ -165,6 +165,17 @@
         "AVVIST",
         null
       ]
+    },
+    "relaterteJournalposter": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "maxItems": 10,
+      "items": {
+        "$ref": "../../types/string.not.blank.json",
+        "format": "uuid"
+      }
     }
   }
 }
