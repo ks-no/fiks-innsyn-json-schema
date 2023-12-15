@@ -167,6 +167,7 @@
       ]
     },
     "relaterteJournalposter": {
+      "description": "Liste med meldingId som refererer til barnevernjournalposter indeksert under samme organisasjon og av samme integrasjon som denne journalposten",
       "type": [
         "array",
         "null"
