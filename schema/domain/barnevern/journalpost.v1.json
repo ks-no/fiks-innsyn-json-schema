@@ -177,6 +177,18 @@
         "$ref": "../../types/string.not.blank.json",
         "format": "uuid"
       }
+    },
+    "tidslinje": {
+      "description": "Indikerer om journalposten skal vises på tidslinjen eller ikke. Null-verdi eller ikke satt tilsvarer false.",
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "examples": [
+        null,
+        true,
+        false
+      ]
     }
   }
 }
