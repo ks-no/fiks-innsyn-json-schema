@@ -14,11 +14,11 @@
       "$ref": "../../types/string.not.blank.json"
     },
     "mappeId": {
-      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Se feltet M003 mappeID i Noark 5.",
+      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M003 mappeID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "systemId": {
-      "description": "Globalt unik identifikasjon av arkivenheten. Se feltet M001 systemID i Noark 5.",
+      "description": "Globalt unik identifikasjon av arkivenheten. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M001 systemID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "beskrivelse": {

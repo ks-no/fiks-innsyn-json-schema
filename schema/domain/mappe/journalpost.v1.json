@@ -25,15 +25,15 @@
       "$ref": "../../types/string.not.blank.json"
     },
     "mappeId": {
-      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører",
+      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M003 mappeID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "systemId": {
-      "description": "Globalt unik identifikasjon av arkivenheten",
+      "description": "Globalt unik identifikasjon av arkivenheten. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M001 systemID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "registreringsId": {
-      "description": "Entydig identifikasjon av registreringen innenfor arkivet",
+      "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M004 registreringsID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "journalpostnummer": {

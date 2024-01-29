@@ -70,15 +70,15 @@
       ]
     },
     "mappeId": {
-      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Påkrevd dersom kanBeOmInnsyn er true. Se feltet M003 mappeID i Noark 5.",
+      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Påkrevd dersom kanBeOmInnsyn er true. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M003 mappeID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "systemId": {
-      "description": "Globalt unik identifikasjon av arkivenheten. Påkrevd dersom kanBeOmInnsyn er true. Se feltet M001 systemID i Noark 5.",
+      "description": "Globalt unik identifikasjon av arkivenheten. Påkrevd dersom kanBeOmInnsyn er true. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M001 systemID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "registreringsId": {
-      "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel. Se feltet M004 registreringsID i Noark 5.",
+      "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M004 registreringsID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "journalid": {
