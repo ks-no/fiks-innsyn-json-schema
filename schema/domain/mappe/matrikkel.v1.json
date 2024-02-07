@@ -4,7 +4,8 @@
   "title": "Matrikkel V1",
   "description": "Informasjon om matrikkel",
   "type": [
-    "object"
+    "object",
+    "null"
   ],
   "additionalProperties": false,
   "properties": {

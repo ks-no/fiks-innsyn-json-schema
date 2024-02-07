@@ -9,6 +9,24 @@
     "type",
     "tittel"
   ],
+  "definitions": {
+    "MappeEiendomV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Eiendom for mappe",
+      "additionalProperties": false,
+      "properties": {
+        "matrikkel": {
+          "$ref": "matrikkel.v1.json"
+        },
+        "adresse": {
+          "$ref": "mappeadresse.v1.json"
+        }
+      }
+    }
+  },
   "properties": {
     "type": {
       "description": "Mappens type. Den generelle typen SAK kan benyttes for det som ikke dekkes av noen av de andre typene.",
@@ -99,24 +117,14 @@
         "$ref": "lenke.v1.json"
       }
     },
-    "matrikler": {
-      "description": "Matrikler til eiendommer som mappen omhandler",
+    "eiendommer": {
+      "description": "Matrikler og adresser som mappen omhandler",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "$ref": "matrikkel.v1.json"
-      }
-    },
-    "adresser": {
-      "description": "Adresser mappen omhandler",
-      "type": [
-        "array",
-        "null"
-      ],
-      "items": {
-        "$ref": "mappeadresse.v1.json"
+        "$ref": "#/definitions/MappeEiendomV1"
       }
     }
   }
