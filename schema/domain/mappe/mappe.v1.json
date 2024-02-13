@@ -36,7 +36,7 @@
       ]
     },
     "tittel": {
-      "description": "Tittel eller navn på arkivenheten",
+      "description": "Tittel eller navn på arkivenheten. Se feltet M020 tittel i Noark 5.",
       "$ref": "../../types/string.not.blank.json"
     },
     "mappeId": {
@@ -47,8 +47,19 @@
       "description": "Globalt unik identifikasjon av arkivenheten. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M001 systemID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
+    "saksaar": {
+      "description": "Inngår i M003 mappeID. Viser året saksmappen ble opprettet. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M011 saksaar i Noark 5.",
+      "$ref": "../../types/int32.nullable.json",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "sakssekvensnummer": {
+      "description": "Inngår i M003 mappeID. Viser rekkefølgen når saksmappen ble opprettet innenfor året. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M012 sakssekvensnummer i Noark 5.",
+      "$ref": "../../types/int32.nullable.json",
+      "minimum": 0
+    },
     "beskrivelse": {
-      "description": "Tekstlig beskrivelse av arkivenheten",
+      "description": "Tekstlig beskrivelse av arkivenheten. Se feltet M021 beskrivelse i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "andreParter": {

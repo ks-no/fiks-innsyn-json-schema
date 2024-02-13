@@ -9,9 +9,40 @@
     "journalposttype",
     "tittel"
   ],
+  "definitions": {
+    "MappeIdV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Identifikator for journalpost",
+      "additionalProperties": false,
+      "properties": {
+        "mappeId": {
+          "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M003 mappeID i Noark 5.",
+          "$ref": "../../types/string.nullable.json"
+        },
+        "systemId": {
+          "description": "Globalt unik identifikasjon av arkivenheten. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M001 systemID i Noark 5.",
+          "$ref": "../../types/string.nullable.json"
+        },
+        "saksaar": {
+          "description": "Inngår i M003 mappeID. Viser året saksmappen ble opprettet. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M011 saksaar i Noark 5.",
+          "$ref": "../../types/int32.nullable.json",
+          "minimum": 0,
+          "maximum": 9999
+        },
+        "sakssekvensnummer": {
+          "description": "Inngår i M003 mappeID. Viser rekkefølgen når saksmappen ble opprettet innenfor året. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M012 sakssekvensnummer i Noark 5.",
+          "$ref": "../../types/int32.nullable.json",
+          "minimum": 0
+        }
+      }
+    }
+  },
   "properties": {
     "journalposttype": {
-      "description": "Noark journalposttype. Mulige verdier: I - inngående dokument, U - utgående dokument, N - organinternt dokument for oppfølging, X - organinternt dokument uten oppfølging, S - saksframlegg",
+      "description": "Navn på type journalpost. Se feltet M082 journalposttype i Noark 5. Mulige verdier: I - inngående dokument, U - utgående dokument, N - organinternt dokument for oppfølging, X - organinternt dokument uten oppfølging, S - saksframlegg",
       "enum": [
         "I",
         "U",
@@ -21,31 +52,32 @@
       ]
     },
     "tittel": {
-      "description": "Tittel eller navn på arkivenheten",
+      "description": "Tittel eller navn på arkivenheten. Se feltet M020 tittel i Noark 5.",
       "$ref": "../../types/string.not.blank.json"
     },
     "mappeId": {
-      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M003 mappeID i Noark 5.",
-      "$ref": "../../types/string.nullable.json"
+      "description": "Identifikator for mappen som journalposten tilhører",
+      "$ref": "#/definitions/MappeIdV1"
+    },
+    "journalpostnummer": {
+      "description": "Viser rekkefølgen på journalpostene innenfor saksmappen. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M011 saksaar i Noark 5.",
+      "$ref": "../../types/int32.nullable.json",
+      "minimum": 0
     },
     "systemId": {
-      "description": "Globalt unik identifikasjon av arkivenheten. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M001 systemID i Noark 5.",
+      "description": "Globalt unik identifikasjon av arkivenheten. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M001 systemID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "registreringsId": {
       "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M004 registreringsID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
-    "journalpostnummer": {
-      "description": "Viser rekkefølgen på journalpostene innenfor mappen",
-      "$ref": "../../types/int32.nullable.json"
-    },
     "journalaar": {
-      "description": "Viser året journalposten ble opprettet",
+      "description": "Viser året journalposten ble opprettet. Se feltet M013 journalaar i Noark 5.",
       "$ref": "../../types/int32.nullable.json"
     },
     "journaldato": {
-      "description": "Journaldato på ISO 8601-format",
+      "description": "Datoen journalposten er journalført. Se feltet M101 journaldato i Noark 5. ISO 8601-format",
       "type": ["string", "null"],
       "format": "date-time",
       "examples": [
@@ -67,7 +99,7 @@
       }
     },
     "beskrivelse": {
-      "description": "Tekstlig beskrivelse av arkivenheten",
+      "description": "Tekstlig beskrivelse av arkivenheten. Se feltet M021 beskrivelse i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "lenker": {
