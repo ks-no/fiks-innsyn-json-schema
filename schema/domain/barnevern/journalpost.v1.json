@@ -93,10 +93,6 @@
       "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M004 registreringsID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
-    "journalaar": {
-      "description": "Viser året journalposten ble opprettet. Se feltet M013 journalaar i Noark 5.",
-      "$ref": "../../types/int32.json"
-    },
     "journaldato": {
       "description": "Datoen journalposten er journalført. På ISO 8601-format. Se feltet M101 journaldato i Noark 5.",
       "type": ["string", "null"],
