@@ -17,7 +17,7 @@
     "required": [ "mappeId", "systemId" ],
     "properties": {
       "mappeId": {
-        "$ref": "../../types/string.not.blank.json"
+        "type": "object"
       },
       "systemId": {
         "$ref": "../../types/string.not.blank.json"
@@ -25,25 +25,32 @@
     }
   },
   "definitions": {
-    "JournalpostIdV1": {
+    "MappeIdV1": {
       "type": [
         "object",
         "null"
       ],
-      "description": "Unik identifikator for journalpost",
+      "description": "Identifikator for journalpost",
       "additionalProperties": false,
-      "required": [
-        "journalaar",
-        "journalsekvensnummer"
-      ],
       "properties": {
-        "journalaar": {
-          "description": "Viser året journalposten ble opprettet. Se feltet M013 journalaar i Noark 5.",
-          "$ref": "../../types/int32.json"
+        "mappeId": {
+          "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M003 mappeID i Noark 5.",
+          "$ref": "../../types/string.nullable.json"
         },
-        "journalsekvensnummer": {
-          "description": "Viser rekkefølgen når journalposten ble opprettet under året. Se feltet M014 journalsekvensnummer i Noark 5.",
-          "$ref": "../../types/int32.json"
+        "systemId": {
+          "description": "Globalt unik identifikasjon av arkivenheten. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M001 systemID i Noark 5.",
+          "$ref": "../../types/string.nullable.json"
+        },
+        "saksaar": {
+          "description": "Inngår i M003 mappeID. Viser året saksmappen ble opprettet. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M011 saksaar i Noark 5.",
+          "$ref": "../../types/int32.nullable.json",
+          "minimum": 0,
+          "maximum": 9999
+        },
+        "sakssekvensnummer": {
+          "description": "Inngår i M003 mappeID. Viser rekkefølgen når saksmappen ble opprettet innenfor året. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M012 sakssekvensnummer i Noark 5.",
+          "$ref": "../../types/int32.nullable.json",
+          "minimum": 0
         }
       }
     }
@@ -70,8 +77,13 @@
       ]
     },
     "mappeId": {
-      "description": "Entydig identifikasjon av mappen innenfor det arkivet mappen tilhører. Påkrevd dersom kanBeOmInnsyn er true. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M003 mappeID i Noark 5.",
-      "$ref": "../../types/string.nullable.json"
+      "description": "Identifikator for mappen som journalposten tilhører",
+      "$ref": "#/definitions/MappeIdV1"
+    },
+    "journalpostnummer": {
+      "description": "Viser rekkefølgen på journalpostene innenfor saksmappen. Vil inkluderes i en eventuell innsending via eDialog. Se feltet M011 saksaar i Noark 5.",
+      "$ref": "../../types/int32.nullable.json",
+      "minimum": 0
     },
     "systemId": {
       "description": "Globalt unik identifikasjon av arkivenheten. Påkrevd dersom kanBeOmInnsyn er true. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M001 systemID i Noark 5.",
@@ -80,10 +92,6 @@
     "registreringsId": {
       "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M004 registreringsID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
-    },
-    "journalid": {
-      "description": "Unik identifikator som innbygger kan benytte til å referere til denne journalposten",
-      "$ref": "#/definitions/JournalpostIdV1"
     },
     "journaldato": {
       "description": "Datoen journalposten er journalført. På ISO 8601-format. Se feltet M101 journaldato i Noark 5.",
