@@ -1,0 +1,104 @@
+{
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/mappe/edialog.skjema.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Edialog Skjema V1",
+  "description": "Lenke til eDialog-skjema",
+  "type": [
+    "object",
+    "null"
+  ],
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "not": { "properties": { "predefinert": { "const": null } } },
+      "required": [ "predefinert" ]
+    },
+    {
+      "not": { "properties": { "egendefinert": { "const": null } } },
+      "required": [ "egendefinert" ]
+    }
+  ],
+  "definitions": {
+    "PredefinertOversettelseV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Predefinert oversettelse.",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "description": "Predefinert type.",
+          "enum": [
+            "SVAR",
+            "KLAGE"
+          ]
+        }
+      }
+    },
+    "EgendefinertOversettelseV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Egendefinert tekst med eventuelle oversettelser. Må ha tekst for minst ett språk.",
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "not": { "properties": { "bokmal": { "const": null } } },
+          "required": [ "bokmal" ]
+        },
+        {
+          "not": { "properties": { "nynorsk": { "const": null } } },
+          "required": [ "nynorsk" ]
+        },
+        {
+          "not": { "properties": { "engelsk": { "const": null } } },
+          "required": [ "engelsk" ]
+        },
+        {
+          "not": { "properties": { "nordsamisk": { "const": null } } },
+          "required": [ "nordsamisk" ]
+        }
+      ],
+      "properties": {
+        "bokmal": {
+          "description": "Tekst på bokmål.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "nynorsk": {
+          "description": "Tekst på nynorsk.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "engelsk": {
+          "description": "Tekst på engelsk.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "nordsamisk": {
+          "description": "Tekst på nordsamisk.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        }
+      }
+    }
+  },
+  "properties": {
+    "predefinert": {
+      "description": "Predefinert type. Disse typene har forhåndsdefinert tekst med oversettelser for støttede språk. Kan ikke settes sammen med egendefinert.",
+      "$ref": "#/definitions/PredefinertOversettelseV1"
+    },
+    "egendefinert": {
+      "description": "Egendefinert type som spesifiserer tekst med eventuelle oversettelser. Kan ikke settes sammen med predefinert.",
+      "$ref": "#/definitions/EgendefinertOversettelseV1"
+    },
+    "edialogId": {
+      "description": "Id for eDialog mottaker og mal. Dersom denne ikke er satt hentes id fra Barnevern-konfigurasjon",
+      "$ref": "../../types/string.nullable.json"
+    }
+  }
+}
