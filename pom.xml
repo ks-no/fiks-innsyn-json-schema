@@ -11,7 +11,7 @@
 
   <groupId>no.ks.fiks</groupId>
   <artifactId>innsyn-json-schema</artifactId>
-  <version>1.10.1-SNAPSHOT</version>
+  <version>1.11.1-SNAPSHOT</version>
   <name>innsyn-json-schema</name>
   <description>JSON schema-modeller for indeksering mot Fiks Innsyn</description>
   <url>https://github.com/ks-no/fiks-innsyn-json-schema</url>
@@ -26,7 +26,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <maven.compiler.source>17</maven.compiler.source>
 
-    <jackson.version>2.16.1</jackson.version>
+    <jackson.version>2.17.0</jackson.version>
     <commons-lang.version>2.6</commons-lang.version>
     <jsonschema2pojo-maven-plugin.version>1.2.1</jsonschema2pojo-maven-plugin.version>
   </properties>
