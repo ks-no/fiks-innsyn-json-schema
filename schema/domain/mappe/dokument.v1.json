@@ -41,7 +41,8 @@
     },
     "svarUtFilnummer": {
       "description": "Nummer i rekken av dokumenter dersom dokumentet er tilknyttet en SvarUt-forsendelse",
-      "$ref": "../../types/int32.nullable.json"
+      "$ref": "../../types/int32.nullable.json",
+      "minimum": 1
     }
   }
 }
