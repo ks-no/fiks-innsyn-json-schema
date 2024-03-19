@@ -22,7 +22,7 @@
     }
   ],
   "definitions": {
-    "PredefinertOversettelseV1": {
+    "EdialogSkjemaPredefinertOversettelseV1": {
       "type": [
         "object",
         "null"
@@ -42,7 +42,7 @@
         }
       }
     },
-    "EgendefinertOversettelseV1": {
+    "EdialogSkjemaEgendefinertOversettelseV1": {
       "type": [
         "object",
         "null"
@@ -93,11 +93,11 @@
   "properties": {
     "predefinert": {
       "description": "Predefinert type. Disse typene har forhåndsdefinert tekst med oversettelser for støttede språk. Kan ikke settes sammen med egendefinert.",
-      "$ref": "#/definitions/PredefinertOversettelseV1"
+      "$ref": "#/definitions/EdialogSkjemaPredefinertOversettelseV1"
     },
     "egendefinert": {
       "description": "Egendefinert type som spesifiserer tekst med eventuelle oversettelser. Kan ikke settes sammen med predefinert.",
-      "$ref": "#/definitions/EgendefinertOversettelseV1"
+      "$ref": "#/definitions/EdialogSkjemaEgendefinertOversettelseV1"
     },
     "edialogId": {
       "description": "Id for eDialog mottaker og mal",
