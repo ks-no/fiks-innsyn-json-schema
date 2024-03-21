@@ -9,16 +9,106 @@
   ],
   "additionalProperties": false,
   "required": [
-    "navn",
     "url"
   ],
+  "oneOf": [
+    {
+      "not": { "properties": { "predefinert": { "const": null } } },
+      "required": [ "predefinert" ]
+    },
+    {
+      "not": { "properties": { "egendefinert": { "const": null } } },
+      "required": [ "egendefinert" ]
+    }
+  ],
+  "definitions": {
+    "LenkePredefinertV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Predefinert lenketype inkludert oversettelser.",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "description": "Predefinert type.",
+          "enum": [
+            "SVAR",
+            "KLAGE"
+          ]
+        }
+      }
+    },
+    "LenkeEgendefinertV1": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Egendefinert lenke. Må sette oversettelse for minst ett språk.",
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "not": { "properties": { "bokmal": { "const": null } } },
+          "required": [ "bokmal" ]
+        },
+        {
+          "not": { "properties": { "nynorsk": { "const": null } } },
+          "required": [ "nynorsk" ]
+        },
+        {
+          "not": { "properties": { "engelsk": { "const": null } } },
+          "required": [ "engelsk" ]
+        },
+        {
+          "not": { "properties": { "nordsamisk": { "const": null } } },
+          "required": [ "nordsamisk" ]
+        }
+      ],
+      "properties": {
+        "utseende": {
+          "description": "Definerer hvordan lenken skal vises. Vises som lenke dersom ingen verdi eller null er satt.",
+          "enum": [
+            null,
+            "KNAPP",
+            "LENKE"
+          ]
+        },
+        "bokmal": {
+          "description": "Tekst på bokmål.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "nynorsk": {
+          "description": "Tekst på nynorsk.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "engelsk": {
+          "description": "Tekst på engelsk.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        },
+        "nordsamisk": {
+          "description": "Tekst på nordsamisk.",
+          "$ref": "../../types/string.nullable.not.blank.json"
+        }
+      }
+    }
+  },
   "properties": {
-    "navn": {
-      "description": "Navn på lenke",
-      "$ref": "../../types/string.not.blank.json"
+    "predefinert": {
+      "description": "Predefinert lenke. Kan ikke settes sammen med egendefinert.",
+      "$ref": "#/definitions/LenkePredefinertV1"
+    },
+    "egendefinert": {
+      "description": "Egendefinert lenke. Kan ikke settes sammen med predefinert.",
+      "$ref": "#/definitions/LenkeEgendefinertV1"
     },
     "url": {
-      "description": "URL for lenke",
+      "description": "URL som lenken skal peke til.",
       "$ref": "../../types/string.not.blank.json"
     }
   }
