@@ -3,30 +3,35 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Barnevern TiltaksplanDetaljer V1",
   "description": "Detaljer for en tiltaksplan",
-
   "type": [
     "object",
     "null"
   ],
-  "properties" : {
-    "startDato" : {
-      "type" : "string",
-      "format" : "date-time"
+  "required": [
+    "startDato",
+    "sluttDato",
+    "statusTekst",
+    "delplaner"
+  ],
+  "properties": {
+    "startDato": {
+      "type": "string",
+      "format": "date-time"
     },
-    "sluttDato" : {
-      "type" : "string",
-      "format" : "date-time"
+    "sluttDato": {
+      "type": "string",
+      "format": "date-time"
     },
-    "sistTilbakeMeldingDato" : {
-      "type" : "string",
-      "format" : "date-time"
+    "sistTilbakeMeldingDato": {
+      "type": "string",
+      "format": "date-time"
     },
-    "statusTekst" : {
-      "type" : "string"
+    "statusTekst": {
+      "type": "string"
     },
-    "delplaner" : {
-      "type" : "array",
-      "items" : {
+    "delplaner": {
+      "type": "array",
+      "items": {
         "$ref": "delplan.v1.json"
       }
     }

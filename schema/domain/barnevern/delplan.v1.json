@@ -4,6 +4,9 @@
   "title": "Barnevern delplan V1",
   "description": "Delplan for tiltaksplan",
   "type": "object",
+  "required": [
+    "beskrivelse"
+  ],
   "properties": {
     "beskrivelse": {
       "type": "string"
