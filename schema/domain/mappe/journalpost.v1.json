@@ -6,7 +6,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "journalposttype",
     "tittel"
   ],
   "definitions": {
@@ -73,7 +72,7 @@
       "$ref": "../../types/string.nullable.json"
     },
     "journaldato": {
-      "description": "Datoen journalposten er journalført. Se feltet M101 journaldato i Noark 5. ISO 8601-format",
+      "description": "Datoen journalposten er journalført på ISO 8601-format. Se feltet M101 journaldato i Noark 5.",
       "type": ["string", "null"],
       "format": "date-time",
       "examples": [

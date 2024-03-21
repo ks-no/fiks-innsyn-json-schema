@@ -107,7 +107,7 @@
       "$ref": "milepel.v1.json"
     },
     "saksdato": {
-      "description": "Tidspunkt for når mappen ble opprettet på ISO 8601-format",
+      "description": "Datoen saken er opprettet. På ISO 8601-format. Se feltet M100 saksdato i Noark 5.",
       "type": ["string", "null"],
       "format": "date-time",
       "examples": [
@@ -115,7 +115,7 @@
       ]
     },
     "saksansvarlig": {
-      "description": "Navn på person som er saksansvarlig",
+      "description": "Navn på person som er saksansvarlig. Se feltet M306 saksansvarlig i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
     "lenker": {

@@ -94,7 +94,7 @@
       "$ref": "../../types/string.nullable.json"
     },
     "journaldato": {
-      "description": "Datoen journalposten er journalført. På ISO 8601-format. Se feltet M101 journaldato i Noark 5.",
+      "description": "Datoen journalposten er journalført på ISO 8601-format. Se feltet M101 journaldato i Noark 5.",
       "type": ["string", "null"],
       "format": "date-time",
       "examples": [
