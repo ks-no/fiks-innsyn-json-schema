@@ -205,6 +205,9 @@
         true,
         false
       ]
+    },
+    "tiltaksplanDetaljer": {
+      "$ref": "tiltaksplanDetaljer.v1.json"
     }
   }
 }

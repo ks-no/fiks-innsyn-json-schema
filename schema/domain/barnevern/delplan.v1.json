@@ -1,0 +1,12 @@
+{
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/delplan.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Barnevern delplan V1",
+  "description": "Delplan for tiltaksplan",
+  "type": "object",
+  "properties": {
+    "beskrivelse": {
+      "type": "string"
+    }
+  }
+}
