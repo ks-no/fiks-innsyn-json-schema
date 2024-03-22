@@ -3,10 +3,6 @@
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "title": "Barnevern TiltaksplanDetaljer V1",
   "description": "Detaljer for en tiltaksplan",
-  "type": [
-    "object",
-    "null"
-  ],
   "required": [
     "startDato",
     "sluttDato",
