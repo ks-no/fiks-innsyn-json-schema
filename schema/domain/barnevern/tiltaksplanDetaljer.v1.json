@@ -6,7 +6,6 @@
   "required": [
     "startDato",
     "sluttDato",
-    "statusTekst",
     "delplaner"
   ],
   "properties": {
@@ -17,13 +16,6 @@
     "sluttDato": {
       "type": "string",
       "format": "date-time"
-    },
-    "sistTilbakeMeldingDato": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "statusTekst": {
-      "type": "string"
     },
     "delplaner": {
       "type": "array",
