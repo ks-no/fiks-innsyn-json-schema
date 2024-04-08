@@ -101,6 +101,16 @@
       "items": {
         "$ref": "lenke.v1.json"
       }
+    },
+    "edialogSkjemaer": {
+      "description": "Skjemaer som kan benyttes til å sende tilbakemelding. Sendes via eDialog til SvarUt, og kan lastes ned via SvarInn. Feltene mappeId, systemId, saksaar og sakssekvensnummer sendes med som metadata.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "edialog.skjema.v1.json"
+      }
     }
   }
 }
