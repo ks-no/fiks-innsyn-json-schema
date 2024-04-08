@@ -8,6 +8,9 @@
     "beskrivelse"
   ],
   "properties": {
+    "id": {
+      "type": "string"
+    },
     "beskrivelse": {
       "type": "string"
     }
