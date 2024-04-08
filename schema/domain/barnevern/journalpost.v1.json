@@ -89,10 +89,6 @@
       "description": "Globalt unik identifikasjon av arkivenheten. Påkrevd dersom kanBeOmInnsyn er true. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M001 systemID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
     },
-    "samtykkeId": {
-      "description": "Globalt unik identifikasjon som referanse til et samtykke. Vil inkluderes når det finnes en relasjon til samtykke.",
-      "$ref": "../../types/string.nullable.json"
-    },
     "registreringsId": {
       "description": "Entydig identifikasjon av registreringen innenfor arkivet. Vil inkluderes i en eventuell innsynsforespørsel eller innsending via eDialog. Se feltet M004 registreringsID i Noark 5.",
       "$ref": "../../types/string.nullable.json"
@@ -115,6 +111,10 @@
     },
     "svarUtForsendelseId": {
       "description": "Forsendelse-id dersom dette er sendt via SvarUt til personen denne journalposten er indeksert for",
+      "$ref": "../../types/string.nullable.json"
+    },
+    "samtykkeId": {
+      "description": "Globalt unik identifikasjon som referanse til et samtykke. Vil inkluderes når det finnes en relasjon til samtykke.",
       "$ref": "../../types/string.nullable.json"
     },
     "eksponertFor": {
