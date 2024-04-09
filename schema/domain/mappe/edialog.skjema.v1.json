@@ -8,9 +8,6 @@
     "null"
   ],
   "additionalProperties": false,
-  "required": [
-    "edialogId"
-  ],
   "oneOf": [
     {
       "not": { "properties": { "predefinert": { "const": null } } },
@@ -100,7 +97,7 @@
       "$ref": "#/definitions/EdialogSkjemaEgendefinertOversettelseV1"
     },
     "edialogId": {
-      "description": "Id for eDialog mottaker og mal",
+      "description": "Id for eDialog mottaker og mal. Dersom denne ikke er satt hentes dette fra konfigurasjon.",
       "$ref": "../../types/string.not.blank.json"
     }
   }
