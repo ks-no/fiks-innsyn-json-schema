@@ -10,10 +10,12 @@
   ],
   "properties": {
     "id": {
-      "type": "../../types/string.not.blank.json"
+      "description": "Identifikator for delmål",
+      "$ref": "../../types/string.not.blank.json"
     },
     "beskrivelse": {
-      "type": "../../types/string.not.blank.json"
+      "description": "Beskrivelse av delmål",
+      "$ref": "../../types/string.not.blank.json"
     }
   }
 }
