@@ -4,11 +4,19 @@
   "title": "Barnevern TiltaksplanDetaljer V1",
   "description": "Detaljer for en tiltaksplan",
   "required": [
+    "tiltaksstatus",
     "startDato",
     "sluttDato",
     "delplaner"
   ],
   "properties": {
+    "tiltaksstatus": {
+      "enum": [
+        "AKTIV",
+        "AVSLUTTET",
+        "MANUELT AVSLUTTET"
+      ]
+    },
     "startDato": {
       "type": "string",
       "format": "date-time"

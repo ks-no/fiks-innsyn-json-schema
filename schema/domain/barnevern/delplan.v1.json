@@ -5,6 +5,7 @@
   "description": "Delplan for tiltaksplan",
   "type": "object",
   "required": [
+    "id",
     "beskrivelse"
   ],
   "properties": {
