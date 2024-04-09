@@ -5,8 +5,8 @@
   "description": "Detaljer for en tiltaksplan",
   "required": [
     "tiltaksstatus",
-    "startDato",
-    "sluttDato",
+    "startdato",
+    "sluttdato",
     "delplaner"
   ],
   "properties": {
@@ -14,7 +14,7 @@
       "enum": [
         "AKTIV",
         "AVSLUTTET",
-        "MANUELT AVSLUTTET"
+        "MANUELT_AVSLUTTET "
       ]
     },
     "startDato": {
@@ -25,10 +25,10 @@
       "type": "string",
       "format": "date-time"
     },
-    "delplaner": {
+    "delmal": {
       "type": "array",
       "items": {
-        "$ref": "delplan.v1.json"
+        "$ref": "delmal.v1.json"
       }
     }
   }
