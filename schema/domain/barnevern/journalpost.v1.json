@@ -113,6 +113,10 @@
       "description": "Forsendelse-id dersom dette er sendt via SvarUt til personen denne journalposten er indeksert for",
       "$ref": "../../types/string.nullable.json"
     },
+    "samtykkeId": {
+      "description": "Globalt unik identifikasjon som referanse til et samtykke. Vil inkluderes når det finnes en relasjon til samtykke.",
+      "$ref": "../../types/string.nullable.json"
+    },
     "eksponertFor": {
       "description": "Parter som har tilgang til denne journalposten",
       "type": [
