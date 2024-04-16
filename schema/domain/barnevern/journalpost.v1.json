@@ -9,21 +9,60 @@
     "tittel",
     "forelderMeldingId"
   ],
-  "if": {
-    "properties": { "innsynsforesporselStatus": { "const": "IKKE_FORESPURT" } },
-    "required": [ "innsynsforesporselStatus" ]
-  },
-  "then": {
-    "required": [ "mappeId", "systemId" ],
-    "properties": {
-      "mappeId": {
-        "type": "object"
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "innsynsforesporselStatus": {
+            "const": "IKKE_FORESPURT"
+          }
+        },
+        "required": [
+          "innsynsforesporselStatus"
+        ]
       },
-      "systemId": {
-        "$ref": "../../types/string.not.blank.json"
+      "then": {
+        "required": [
+          "mappeId",
+          "systemId"
+        ],
+        "properties": {
+          "mappeId": {
+            "type": "object"
+          },
+          "systemId": {
+            "$ref": "../../types/string.not.blank.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "dokumenttype": {
+            "const": "TILTAKSPLAN"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "tiltaksplanDetaljer"
+        ],
+        "properties": {
+          "tiltaksplanDetaljer": {
+            "type": "object"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "tiltaksplanDetaljer": {
+            "type": "null"
+          }
+        }
       }
     }
-  },
+  ],
   "definitions": {
     "MappeIdV1": {
       "type": [
@@ -219,6 +258,9 @@
       "items": {
         "$ref": "edialog.skjema.v1.json"
       }
+    },
+    "tiltaksplanDetaljer": {
+      "$ref": "tiltaksplan.detaljer.v1.json"
     }
   }
 }

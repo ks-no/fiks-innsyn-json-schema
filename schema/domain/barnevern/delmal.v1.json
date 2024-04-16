@@ -1,0 +1,21 @@
+{
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/delmal.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Barnevern delmal V1",
+  "description": "Delmål for tiltaksplan",
+  "type": "object",
+  "required": [
+    "id",
+    "beskrivelse"
+  ],
+  "properties": {
+    "id": {
+      "description": "Identifikator for delmål",
+      "$ref": "../../types/string.not.blank.json"
+    },
+    "beskrivelse": {
+      "description": "Beskrivelse av delmål",
+      "$ref": "../../types/string.not.blank.json"
+    }
+  }
+}

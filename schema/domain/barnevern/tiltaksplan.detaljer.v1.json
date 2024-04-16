@@ -1,0 +1,35 @@
+{
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/barnevern/tiltaksplan.detaljer.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Barnevern TiltaksplanDetaljer V1",
+  "description": "Detaljer for en tiltaksplan",
+  "required": [
+    "tiltaksstatus",
+    "startdato",
+    "sluttdato",
+    "delplaner"
+  ],
+  "properties": {
+    "tiltaksstatus": {
+      "enum": [
+        "AKTIV",
+        "AVSLUTTET",
+        "MANUELT_AVSLUTTET "
+      ]
+    },
+    "startDato": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sluttDato": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "delmal": {
+      "type": "array",
+      "items": {
+        "$ref": "delmal.v1.json"
+      }
+    }
+  }
+}
