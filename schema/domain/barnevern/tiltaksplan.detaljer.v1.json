@@ -5,9 +5,9 @@
   "description": "Detaljer for en tiltaksplan",
   "required": [
     "tiltaksstatus",
-    "startdato",
-    "sluttdato",
-    "delplaner"
+    "startDato",
+    "sluttDato",
+    "delmal"
   ],
   "properties": {
     "tiltaksstatus": {
