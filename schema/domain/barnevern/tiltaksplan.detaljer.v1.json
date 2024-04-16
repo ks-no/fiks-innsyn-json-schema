@@ -5,8 +5,8 @@
   "description": "Detaljer for en tiltaksplan",
   "required": [
     "tiltaksstatus",
-    "startDato",
-    "sluttDato",
+    "startdato",
+    "sluttdato",
     "delmal"
   ],
   "properties": {
@@ -17,11 +17,11 @@
         "MANUELT_AVSLUTTET "
       ]
     },
-    "startDato": {
+    "startdato": {
       "type": "string",
       "format": "date-time"
     },
-    "sluttDato": {
+    "sluttdato": {
       "type": "string",
       "format": "date-time"
     },
