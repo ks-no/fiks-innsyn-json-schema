@@ -238,7 +238,7 @@
       }
     },
     "tiltaksplanDetaljer": {
-      "$ref": "tiltaksplanDetaljer.v1.json"
+      "$ref": "tiltaksplan.detaljer.v1.json"
     }
   }
 }
