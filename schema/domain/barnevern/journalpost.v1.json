@@ -42,7 +42,10 @@
           "dokumenttype": {
             "const": "TILTAKSPLAN"
           }
-        }
+        },
+        "required": [
+          "dokumenttype"
+        ]
       },
       "then": {
         "required": [

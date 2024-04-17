@@ -7,7 +7,7 @@
     "tiltaksstatus",
     "startdato",
     "sluttdato",
-    "delplaner"
+    "delmal"
   ],
   "properties": {
     "tiltaksstatus": {
@@ -17,11 +17,11 @@
         "MANUELT_AVSLUTTET "
       ]
     },
-    "startDato": {
+    "startdato": {
       "type": "string",
       "format": "date-time"
     },
-    "sluttDato": {
+    "sluttdato": {
       "type": "string",
       "format": "date-time"
     },
