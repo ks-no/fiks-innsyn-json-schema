@@ -42,7 +42,10 @@
           "dokumenttype": {
             "const": "TILTAKSPLAN"
           }
-        }
+        },
+        "required": [
+          "innsynsforesporselStatus"
+        ]
       },
       "then": {
         "required": [
