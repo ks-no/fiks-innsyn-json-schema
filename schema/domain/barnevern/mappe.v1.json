@@ -6,7 +6,8 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "tittel"
+    "tittel",
+    "organisasjonsnummer"
   ],
   "properties": {
     "tittel": {
@@ -111,6 +112,10 @@
       "items": {
         "$ref": "edialog.skjema.v1.json"
       }
+    },
+    "organisasjonsnummer": {
+      "description": "Organisasjonsnummer",
+      "$ref": "../../types/string.nullable.not.blank.json"
     }
   }
 }
