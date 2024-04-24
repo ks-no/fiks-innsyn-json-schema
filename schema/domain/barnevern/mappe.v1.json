@@ -6,7 +6,8 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "tittel"
+    "tittel",
+    "organisasjonsnummer"
   ],
   "properties": {
     "tittel": {
@@ -111,6 +112,11 @@
       "items": {
         "$ref": "edialog.skjema.v1.json"
       }
+    },
+    "organisasjonsnummer": {
+      "description": "Organisasjonsnummer til enheten som er ansvarlig for saken.",
+      "$ref": "../../types/string.not.blank.json",
+      "pattern": "^[0-9]{9}$"
     }
   }
 }
