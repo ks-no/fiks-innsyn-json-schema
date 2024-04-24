@@ -114,7 +114,7 @@
       }
     },
     "organisasjonsnummer": {
-      "description": "Organisasjonsnummer",
+      "description": "Organisasjonsnummer til enheten som er ansvarlig for saken.",
       "$ref": "../../types/string.not.blank.json",
       "pattern": "^[0-9]{9}$"
     }
