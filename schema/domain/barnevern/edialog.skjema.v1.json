@@ -34,7 +34,8 @@
           "description": "Predefinert type.",
           "enum": [
             "SVAR",
-            "KLAGE"
+            "KLAGE",
+            "POST"
           ]
         }
       }
