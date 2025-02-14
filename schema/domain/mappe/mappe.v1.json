@@ -92,6 +92,18 @@
         "2022-03-16T14:10:11+00:00"
       ]
     },
+    "erAvsluttet": {
+      "description": "Indikerer om mappen er avsluttet. Har presedens over avsluttet-feltet.",
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "examples": [
+        null,
+        true,
+        false
+      ]
+    },
     "milepeler": {
       "description": "Liste med mappens milepeler",
       "type": [
