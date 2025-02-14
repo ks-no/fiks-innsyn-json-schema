@@ -92,7 +92,7 @@
         "2022-03-16T14:10:11+00:00"
       ]
     },
-    "avsluttetFlagg": {
+    "erAvsluttet": {
       "description": "Indikerer om mappen er avsluttet. Har presedens over avsluttet-feltet.",
       "type": [
         "boolean",
