@@ -1,0 +1,71 @@
+{
+  "$id": "https://api.fiks.ks.no/innsyn/schema/domain/oppgave.v1.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Innsyn Oppgave V1",
+  "description": "Melding som beskriver en oppgave",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "advarsler",
+    "status",
+    "tittel",
+    "beskrivelse",
+    "url"
+  ],
+  "definitions": {
+    "OppgaveStatus": {
+      "type": "string",
+      "description": "Status på oppgaven",
+      "enum": [
+        "NY",
+        "FULLFØRT"
+      ]
+    }
+  },
+  "properties": {
+    "id": {
+      "description": "Id på oppgave",
+      "type": "string",
+      "format": "uuid",
+      "examples": [
+        "Søknad om fartsdempende tiltak"
+      ]
+    },
+    "advarsler": {
+      "description": "Advarsler knyttet til oppgaven",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        "Noe er feil"
+      ]
+    },
+    "status": {
+      "description": "Status på oppgaven",
+      "$ref": "#/definitions/OppgaveStatus",
+      "examples": [
+        "Ola Nordmann"
+      ]
+    },
+    "tittel": {
+      "description": "Tittel på oppgave",
+      "type": "string",
+      "examples": [
+        "Samtykke, endring av barnehageplass"
+      ]
+    },
+    "beskrivelse": {
+      "description": "beskrivelse på oppgave",
+      "type": "string",
+      "examples": [
+        "Ida Smestad har sendt inn en søknad om endring av barnehageplass. Morten Smestad må gi sitt samtykke."
+      ]
+    },
+    "url": {
+      "$ref": "../types/string.nullable.json",
+      "description": "Url til oppgave"
+    }
+  }
+}
